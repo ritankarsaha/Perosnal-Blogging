@@ -12,6 +12,7 @@
 		"format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
 	},
 	"devDependencies": {
+		"@sveltejs/adapter-netlify": "^4.2.1",
 		"@sveltejs/enhanced-img": "^0.1.8",
 		"@sveltejs/kit": "^2.0.6",
 		"@sveltejs/vite-plugin-svelte": "^3.0.2",
