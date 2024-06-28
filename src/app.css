@@ -7,131 +7,128 @@
 
 html {
   font-family: "Charter";
-	font-weight: normal;
+  font-weight: normal;
   color: #181818;
   background: #fcfcfc;
 } 
 
 p a {
-	color: #0471d7;
+  color: #0471d7;
 }
 
-	p a:hover {
-		text-decoration: underline;
-		cursor: pointer;
-	}
-
+p a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
 
 * {
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @layer base {
-	h1 {
-		@apply text-xl;
-	}
-	h2 {
-		@apply text-lg;
-		@apply flex flex-row-reverse items-center justify-end;
-		@apply mt-3
-	}
-	h3 {
-		@apply text-sm;
-	}
+  h1 {
+    @apply text-xl;
+  }
+  h2 {
+    @apply text-lg flex flex-row-reverse items-center justify-end mt-3;
+  }
+  h3 {
+    @apply text-sm;
+  }
 
-	article h3, strong, b {
-		color: #303030;
-		@apply font-bold;
-		letter-spacing: 0.1px;
-	}
+  article h3, strong, b {
+    color: #303030;
+    @apply font-bold;
+    letter-spacing: 0.1px;
+  }
 
-	article strong span {
-		font-weight: 600;
-	}
+  article strong span {
+    font-weight: 600;
+  }
 
-	strong, b {
-		@apply text-[16px]
-	}
+  strong, b {
+    @apply text-[16px];
+  }
 
-	p, li {
-		@apply text-sm;
-	}
+  p, li {
+    @apply text-sm;
+  }
 
-	code {
-		@apply text-xs;
-	}
+  code {
+    @apply text-xs;
+  }
 
-	nav a * {
-		@apply text-[15px] !important;
-	}
+  nav a * {
+    @apply text-[15px] !important;
+  }
 
-	span:not(.katex-display span) {
-		color: #333333;
-		font-size: 100%;
-	}
+  span:not(.katex-display span) {
+    color: #333333;
+    font-size: 100%;
+  }
 
-	p {
-		margin-top: 5px;
-		margin-bottom: 15px;
-	}
-	pre[class*=language-] {
-    	@apply bg-white;
-	    @apply rounded-lg;
-			@apply w-full;
-			@apply text-[12px];
-	    @apply mb-6; 
-    	line-height: 1.2rem;
-	    font-family: "Roboto Mono";
-    	border: 1px solid #ebebeb;
-	}
-	ul {
-    	@apply list-disc;
-  	}
-  	ul li {
-		@apply ml-8;
-		@apply mb-1;
-  	}
-  	ol {
-    	@apply list-decimal;
-  	}
-  	ol li {
-		@apply ml-8;
-		@apply mb-1;
-  	}
-	@media (min-width: theme('screens.sm')) {
-		h1 {
-			@apply text-xxl;
-			line-height: 2rem;
-		}
-		h2 {
-			@apply text-xl;
-		}
-		h3 {
-			@apply text-[20px];
-		}
+  p {
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+  
+  pre[class*=language-] {
+    @apply bg-white rounded-lg w-full text-[12px] mb-6;
+    line-height: 1.2rem;
+    font-family: "Roboto Mono";
+    border: 1px solid #ebebeb;
+  }
+  
+  ul {
+    @apply list-disc;
+  }
+  
+  ul li {
+    @apply ml-8 mb-1;
+  }
+  
+  ol {
+    @apply list-decimal;
+  }
+  
+  ol li {
+    @apply ml-8 mb-1;
+  }
 
-		nav a * {
-			@apply text-[16px] !important;
-		}
+  @media (min-width: theme('screens.sm')) {
+    h1 {
+      @apply text-xxl;
+      line-height: 2rem;
+    }
+    h2 {
+      @apply text-xl;
+    }
+    h3 {
+      @apply text-[20px];
+    }
 
+    nav a * {
+      @apply text-[16px] !important;
+    }
 
     p, li {
-			@apply text-base;
-		}
+      @apply text-base;
+    }
 
-		code {
-			@apply text-sm;
-		}
+    code {
+      @apply text-sm;
+    }
 
-		strong, b {
-			@apply text-[18px]
-		}
-		pre[class*=language-] {
-    	@apply text-xxxs !important;
-    	line-height: 1.5rem;
-		}
+    strong, b {
+      @apply text-[18px];
+    }
+
+    pre[class*=language-] {
+      @apply text-xxxs !important;
+      line-height: 1.5rem;
+    }
   }
 }
 
@@ -140,11 +137,9 @@ code {
   color: #777777;
 }
 
-
 li::marker {
-	font-weight: 600;
+  font-weight: 600;
 }
-
 
 a:hover {
   cursor: pointer;
@@ -152,7 +147,7 @@ a:hover {
 }
 
 a {
-	color: #0471d7;
+  color: #0471d7;
 }
 
 h2:hover .icon {
@@ -169,296 +164,257 @@ h2:hover .icon {
   margin-right: 0px;
 }
 
-/* ---------- ARTICLE STYLING ----------- */
 article ul, article ol {
-	margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 article {
-	text-align: left;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 100%;
-	overflow: hidden;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
 }
 
 article table {
-	margin-top: 10px;
-	display: block;
-	max-width: 100%;
-	overflow-x: scroll !important;
+  margin-top: 10px;
+  display: block;
+  max-width: 100%;
+  overflow-x: scroll !important;
 }
 
 article div {
-	display: block;
-	max-width: 100%;
-	overflow-x: scroll;
+  display: block;
+  max-width: 100%;
+  overflow-x: scroll;
 }
 
 article p, article * li, article ul, article ol, article h2, article h3, article h1, article hr, article blockquote {
-	width: 100%;
-	max-width: 100%;
+  width: 100%;
+  max-width: 100%;
 }
 
 article * li {
-	max-width: calc(100% - 2rem);
+  max-width: calc(100% - 2rem);
 }
 
 article hr {
-	margin-top: 10px;
-	margin-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 article th {
-	border: 1px solid #aaaaaa;
-	padding-top: 2px;
-	padding-bottom: 2px;
-	padding-left: 10px;
-	padding-right: 10px;
+  border: 1px solid #aaaaaa;
+  padding: 2px 10px;
 }
 
 article td {
-	border: 1px solid #aaaaaa;
-	padding-top: 2px;
-	padding-bottom: 2px;
-	padding-left: 10px;
-		padding-right: 10px;
+  border: 1px solid #aaaaaa;
+  padding: 2px 10px;
 }
 
 article blockquote {
-	border-left: 3px solid #dddddd;
+  border-left: 3px solid #dddddd;
 }
 
 article blockquote p {
-	font-family: "Charter";
-	font-style: italic;
-	color: #666666;
-	font-size: 20px;
-	margin-top: 0px !important;
-	margin-bottom: 0px !important;
-	margin-left: 20px;
-	margin-right: 20px;
+  font-family: "Charter";
+  font-style: italic;
+  color: #666666;
+  font-size: 20px;
+  margin: 0 20px;
 }
 
 article blockquote p b {
-	font-family: "Charter";
-	font-style: normal;
-	color: #181818;
-	font-weight: 500;
-	font-size: 18px;
+  font-family: "Charter";
+  font-style: normal;
+  color: #181818;
+  font-weight: 500;
+  font-size: 18px;
 }
 
 article code:not(pre code) {
-	border: 1px solid #ebebeb;
-	background: white;
-	color: #444444 !important;
-	padding: 3px;
-	padding-left: 7px;
-	padding-right: 7px;
-	border-radius: 10px;
+  border: 1px solid #ebebeb;
+  background: white;
+  color: #444444 !important;
+  padding: 3px 7px;
+  border-radius: 10px;
 }
 
 article p {
-	margin-top: 9px;
-	margin-bottom: 9px;
+  margin: 9px 0;
 }
 
 article ol, article ul {
-	margin-top: -5px;
+  margin-top: -5px;
 }
 
 article h2, article h3 {
-	margin-bottom: -7px !important;
+  margin-bottom: -7px !important;
 }
 
 article img {
-	border: 1px solid #ebebeb;
-	border-radius: 10px;
+  border: 1px solid #ebebeb;
+  border-radius: 10px;
 }
 
-/* ------------ SCROLLBAR -------------- */
 pre::-webkit-scrollbar {
-    height: 8px;
-    width: 10px;
-	border-radius: 9999px;
-    background: #ebebeb;
+  height: 8px;
+  width: 10px;
+  border-radius: 9999px;
+  background: #ebebeb;
 }
 
-/* Track */
 pre::-webkit-scrollbar-track {
-    background: #fbfbfb;
-	border-radius: 10px;
+  background: #fbfbfb;
+  border-radius: 10px;
 }
 
-/* Handle */
 pre::-webkit-scrollbar-thumb {
-    background: #ebebeb;
-	border-radius: 16px;
+  background: #ebebeb;
+  border-radius: 16px;
 }
 
-/* Handle on hover */
 pre::-webkit-scrollbar-thumb:hover {
-    background: #0471d7;
+  background: #0471d7;
 }
 
 @font-face {
-    font-family: 'Charter';
-    src: url('/fonts/Charter.woff2') format('woff2'),
-        url('/fonts/Charter.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Charter';
+  src: url('/fonts/Charter.woff2') format('woff2'),
+       url('/fonts/Charter.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Charter';
-    src: url('/fonts/Charter-BoldItalic.woff2') format('woff2'),
-        url('/fonts/Charter-BoldItalic.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
-    font-display: swap;
+  font-family: 'Charter';
+  src: url('/fonts/Charter-BoldItalic.woff2') format('woff2'),
+       url('/fonts/Charter-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Charter';
-    src: url('/fonts/Charter-Bold.woff2') format('woff2'),
-        url('/fonts/Charter-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Charter';
+  src: url('/fonts/Charter-Bold.woff2') format('woff2'),
+       url('/fonts/Charter-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Charter';
-    src: url('/fonts/Charter-Italic.woff2') format('woff2'),
-        url('/fonts/Charter-Italic.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
+  font-family: 'Charter';
+  src: url('/fonts/Charter-Italic.woff2') format('woff2'),
+       url('/fonts/Charter-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
 }
-
-/* ---- TWEET EMBED STYLING ---- */
 
 .react-tweet-theme {
-	--tweet-container-margin: 1.5rem 0;
-
-	/* Header */
-	--tweet-header-font-size: 0.9375rem;
-	--tweet-header-line-height: 1.25rem;
-
-	/* Text */
-	--tweet-body-font-size: 1.25rem;
-	--tweet-body-font-weight: 400;
-	--tweet-body-line-height: 1.5rem;
-	--tweet-body-margin: 0;
-
-	/* Quoted Tweet */
-	--tweet-quoted-container-margin: 0.75rem 0;
-	--tweet-quoted-body-font-size: 0.938rem;
-	--tweet-quoted-body-font-weight: 400;
-	--tweet-quoted-body-line-height: 1.25rem;
-	--tweet-quoted-body-margin: 0.25rem 0 0.75rem 0;
-
-	/* Info */
-	--tweet-info-font-size: 0.9375rem;
-	--tweet-info-line-height: 1.25rem;
-
-	/* Actions like the like, reply and copy buttons */
-	--tweet-actions-font-size: 0.875rem;
-	--tweet-actions-line-height: 1rem;
-	--tweet-actions-font-weight: 700;
-	--tweet-actions-icon-size: 1.25em;
-	--tweet-actions-icon-wrapper-size: calc(var(--tweet-actions-icon-size) + 0.75em);
-
-	/* Reply button */
-	--tweet-replies-font-size: 0.875rem;
-	--tweet-replies-line-height: 1rem;
-	--tweet-replies-font-weight: 700;
+  --tweet-container-margin: 1.5rem 0;
+  --tweet-header-font-size: 0.9375rem;
+  --tweet-header-line-height: 1.25rem;
+  --tweet-body-font-size: 1.25rem;
+  --tweet-body-font-weight: 400;
+  --tweet-body-line-height: 1.5rem;
+  --tweet-body-margin: 0;
+  --tweet-quoted-container-margin: 0.75rem 0;
+  --tweet-quoted-body-font-size: 0.938rem;
+  --tweet-quoted-body-font-weight: 400;
+  --tweet-quoted-body-line-height: 1.25rem;
+  --tweet-quoted-body-margin: 0.25rem 0 0.75rem 0;
+  --tweet-info-font-size: 0.9375rem;
+  --tweet-info-line-height: 1.25rem;
+  --tweet-actions-font-size: 0.875rem;
+  --tweet-actions-line-height: 1rem;
+  --tweet-actions-font-weight: 700;
+  --tweet-actions-icon-size: 1.25em;
+  --tweet-actions-icon-wrapper-size: calc(var(--tweet-actions-icon-size) + 0.75em);
+  --tweet-replies-font-size: 0.875rem;
+  --tweet-replies-line-height: 1rem;
+  --tweet-replies-font-weight: 700;
 }
 
 :where(.react-tweet-theme) * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :is([data-theme='light'], .light) :where(.react-tweet-theme),
 :where(.react-tweet-theme) {
-	--tweet-skeleton-gradient: linear-gradient(270deg, #fafafa, #eaeaea, #eaeaea, #fafafa);
-	--tweet-border: 1px solid rgb(207, 217, 222);
-	--tweet-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
-		sans-serif;
-	--tweet-font-color: rgb(15, 20, 25);
-	--tweet-font-color-secondary: rgb(83, 100, 113);
-	--tweet-bg-color: #fff;
-	--tweet-bg-color-hover: rgb(247, 249, 249);
-	--tweet-quoted-bg-color-hover: rgba(0, 0, 0, 0.03);
-	--tweet-color-blue-primary: rgb(29, 155, 240);
-	--tweet-color-blue-primary-hover: rgb(26, 140, 216);
-	--tweet-color-blue-secondary: rgb(0, 111, 214);
-	--tweet-color-blue-secondary-hover: rgba(0, 111, 214, 0.1);
-	--tweet-color-red-primary: rgb(249, 24, 128);
-	--tweet-color-red-primary-hover: rgba(249, 24, 128, 0.1);
-	--tweet-color-green-primary: rgb(0, 186, 124);
-	--tweet-color-green-primary-hover: rgba(0, 186, 124, 0.1);
-	--tweet-twitter-icon-color: var(--tweet-font-color);
-	--tweet-verified-old-color: rgb(130, 154, 171);
-	--tweet-verified-blue-color: var(--tweet-color-blue-primary);
+  --tweet-skeleton-gradient: linear-gradient(270deg, #fafafa, #eaeaea, #eaeaea, #fafafa);
+  --tweet-border: 1px solid rgb(207, 217, 222);
+  --tweet-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --tweet-font-color: rgb(15, 20, 25);
+  --tweet-font-color-secondary: rgb(83, 100, 113);
+  --tweet-bg-color: #fff;
+  --tweet-bg-color-hover: rgb(247, 249, 249);
+  --tweet-quoted-bg-color-hover: rgba(0, 0, 0, 0.03);
+  --tweet-color-blue-primary: rgb(29, 155, 240);
+  --tweet-color-blue-primary-hover: rgb(26, 140, 216);
+  --tweet-color-blue-secondary: rgb(0, 111, 214);
+  --tweet-color-blue-secondary-hover: rgba(0, 111, 214, 0.1);
+  --tweet-color-red-primary: rgb(249, 24, 128);
+  --tweet-color-red-primary-hover: rgba(249, 24, 128, 0.1);
+  --tweet-color-green-primary: rgb(0, 186, 124);
+  --tweet-color-green-primary-hover: rgba(0, 186, 124, 0.1);
+  --tweet-twitter-icon-color: var(--tweet-font-color);
+  --tweet-verified-old-color: rgb(130, 154, 171);
+  --tweet-verified-blue-color: var(--tweet-color-blue-primary);
 }
 
 :is([data-theme='dark'], .dark) :where(.react-tweet-theme) {
-	--tweet-skeleton-gradient: linear-gradient(
-		270deg,
-		#15202b,
-		rgb(30, 39, 50),
-		rgb(30, 39, 50),
-		rgb(21, 32, 43)
-	);
-	--tweet-border: 1px solid rgb(66, 83, 100);
-	--tweet-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
-		sans-serif;
-	--tweet-font-color: rgb(247, 249, 249);
-	--tweet-font-color-secondary: rgb(139, 152, 165);
-	--tweet-bg-color: rgb(21, 32, 43);
-	--tweet-bg-color-hover: rgb(30, 39, 50);
-	--tweet-quoted-bg-color-hover: rgba(255, 255, 255, 0.03);
-	--tweet-color-blue-primary: rgb(29, 155, 240);
-	--tweet-color-blue-primary-hover: rgb(26, 140, 216);
-	--tweet-color-blue-secondary: rgb(107, 201, 251);
-	--tweet-color-blue-secondary-hover: rgba(107, 201, 251, 0.1);
-	--tweet-color-red-primary: rgb(249, 24, 128);
-	--tweet-color-red-primary-hover: rgba(249, 24, 128, 0.1);
-	--tweet-color-green-primary: rgb(0, 186, 124);
-	--tweet-color-green-primary-hover: rgba(0, 186, 124, 0.1);
-	--tweet-twitter-icon-color: var(--tweet-font-color);
-	--tweet-verified-old-color: rgb(130, 154, 171);
-	--tweet-verified-blue-color: #fff;
+  --tweet-skeleton-gradient: linear-gradient(270deg, #15202b, rgb(30, 39, 50), rgb(30, 39, 50), rgb(21, 32, 43));
+  --tweet-border: 1px solid rgb(66, 83, 100);
+  --tweet-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --tweet-font-color: rgb(247, 249, 249);
+  --tweet-font-color-secondary: rgb(139, 152, 165);
+  --tweet-bg-color: rgb(21, 32, 43);
+  --tweet-bg-color-hover: rgb(30, 39, 50);
+  --tweet-quoted-bg-color-hover: rgba(255, 255, 255, 0.03);
+  --tweet-color-blue-primary: rgb(29, 155, 240);
+  --tweet-color-blue-primary-hover: rgb(26, 140, 216);
+  --tweet-color-blue-secondary: rgb(107, 201, 251);
+  --tweet-color-blue-secondary-hover: rgba(107, 201, 251, 0.1);
+  --tweet-color-red-primary: rgb(249, 24, 128);
+  --tweet-color-red-primary-hover: rgba(249, 24, 128, 0.1);
+  --tweet-color-green-primary: rgb(0, 186, 124);
+  --tweet-color-green-primary-hover: rgba(0, 186, 124, 0.1);
+  --tweet-twitter-icon-color: var(--tweet-font-color);
+  --tweet-verified-old-color: rgb(130, 154, 171);
+  --tweet-verified-blue-color: #fff;
 }
 
 .verified {
-	margin-left: 0.125rem;
-	max-width: 20px;
-	max-height: 20px;
-	height: 1.25em;
-	fill: currentColor;
-	user-select: none;
-	vertical-align: text-bottom;
+  margin-left: 0.125rem;
+  max-width: 20px;
+  max-height: 20px;
+  height: 1.25em;
+  fill: currentColor;
+  user-select: none;
+  vertical-align: text-bottom;
 }
 
 .article {
-	display: block;
+  display: block;
 }
 
 .article .info {
-	overflow: hidden;
+  overflow: hidden;
 }
 
 .article .author .authorMeta span {
-	color: #777777 !important;
+  color: #777777 !important;
 }
 
 .react-tweet-theme {
-	padding: 0;
-	margin: 0 !important;
+  padding: 0;
+  margin: 0 !important;
 }
