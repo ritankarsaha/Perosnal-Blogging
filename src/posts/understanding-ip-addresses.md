@@ -4,7 +4,7 @@ description: 'An in-depth look at what IP addresses are, their versions, and the
 published: true
 date: '2024-06-26'
 slug: 'understanding-ip-addresses'
-tags: ['IP Address', 'IP', 'System Design', 'Internet']
+tags: ['IP Address', 'IP', 'System Design', 'Internet','All']
 ---
 
 # Understanding IP Addresses
@@ -16,6 +16,8 @@ tags: ['IP Address', 'IP', 'System Design', 'Internet']
 IP stands for **Internet Protocol**. IP addresses are used by devices to connect over the Internet and/or locally. They govern the format of data sent locally or via the internet.
 
 In essence, IP addresses are identifiers that allow devices to send information over the internet between devices or over a network. They contain location information and make the devices available for communication. The internet further needs a way to differentiate between the vast range of devices we have — routers, mobiles, computers, laptops, etc. Generating and assigning IP addresses is the process of doing that.
+
+
 
 ## Versions of IP Addresses
 

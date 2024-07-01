@@ -4,7 +4,7 @@ description: 'An in-depth look of the OSI Model and the sever different layers o
 published: true
 date: '2024-06-28'
 slug: 'OSI-Model'
-tags: ['OSI Model', 'System Design', 'Internet']
+tags: ['OSI Model', 'System Design', 'Internet','All']
 ---
 
 # OSI Model
