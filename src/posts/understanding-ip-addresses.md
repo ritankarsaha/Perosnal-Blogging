@@ -4,7 +4,7 @@ description: 'An in-depth look at what IP addresses are, their versions, and the
 published: true
 date: '2024-06-26'
 slug: 'understanding-ip-addresses'
-tags: ['IP Address', 'IP', 'System Design', 'Internet','All']
+tags: ['IP Address', 'IP', 'System Design', 'Internet', 'All']
 ---
 
 # Understanding IP Addresses
@@ -17,9 +17,15 @@ IP stands for **Internet Protocol**. IP addresses are used by devices to connect
 
 In essence, IP addresses are identifiers that allow devices to send information over the internet between devices or over a network. They contain location information and make the devices available for communication. The internet further needs a way to differentiate between the vast range of devices we have — routers, mobiles, computers, laptops, etc. Generating and assigning IP addresses is the process of doing that.
 
-
+<p align="center">
+  <img src="https://github.com/ritankarsaha/Perosnal-Blogging/assets/136831315/2c3a185f-4f34-418f-bd03-ea1868bdbd5b" alt="Basic overview of the IP Address" style="width:70%; max-width:600px;">
+</p>
 
 ## Versions of IP Addresses
+
+<p align="center">
+  <img src="https://github.com/ritankarsaha/Perosnal-Blogging/assets/136831315/2d607f43-9a80-4019-ba16-99f61ac3172d" alt="Versions of the IP Address" style="width:70%; max-width:600px;">
+</p>
 
 There are two different versions of IP addresses: **IPv4** and **IPv6**. Let’s take a deep dive into both of them.
 
@@ -38,6 +44,10 @@ The newer generation Internet Protocol is IPv6. It uses a 128-bit alphanumerical
 ## Types of IP Addresses
 
 There are different types of IP addresses. Let’s deep dive into each of them.
+
+<p align="center">
+  <img src="https://github.com/ritankarsaha/Perosnal-Blogging/assets/136831315/9b1c9bc3-8fd7-4c2c-95c9-e85713e582db" alt="Different types of IP Addresses" style="width:70%; max-width:600px;">
+</p>
 
 ### Public IP Address
 
@@ -69,4 +79,4 @@ Understanding IP addresses is crucial for navigating the complex world of intern
 
 ---
 
-Thank you for taking the time to read this article! If you have any inputs, please suggest them in the comments section or send an email with your feedback. I will incorporate your suggestions and add you to the contributor's list.
+Thank you for taking the time to read this article! If you have any inputs, please suggest them in the comments section or send an email with your feedback. I will incorporate your suggestions and add you to the contributor's list. 
