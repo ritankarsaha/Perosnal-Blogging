@@ -7,10 +7,13 @@ slug: 'DNS-Caching'
 tags: ['DNS', 'System Design', 'Internet','All']
 ---
 
-# DNS Zones, Caching, and Reverse DNS
+# DNS Zones, Caching, and Reverse DNS 
 
 
 ## DNS Zones
+
+DNS stands for Domain Name Server
+
 A DNS Zone is a distinct part of the domain namespace which is delegated to a legal entity like a person, an authority, or an organization who is responsible for maintaining the DNS Zone. A DNS Zone is also an administrative function allowing for granular control of DNS Components such as Authoritative name servers.
 
 ## DNS Caching
