@@ -29,6 +29,11 @@
 			<a href="/skills" class={path.startsWith("/skills") ? "nav-link active" : "nav-link"}>
 				<i class="fas fa-cogs fa-lg"></i>  <!-- Added skills icon -->
 			</a>
+
+			<a href="/contributions" class={path.startsWith("/contributions") ? "nav-link active" : "nav-link"}>
+				<i class="fas fa-code-branch fa-lg"></i>
+			</a>
+			
 			
 
 		</div>
