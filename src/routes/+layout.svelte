@@ -17,9 +17,20 @@
 		  <a href="/" class="text-lg font-bold text-gray-800">Ritankar Saha</a>
 		</div>
 		<div class="flex space-x-6">
-		  <a href="/" class={path == "/" ? "nav-link active" : "nav-link"}><i class="fas fa-home fa-lg"></i></a>
-		  <a href="/writing" class={path.startsWith("/writing") ? "nav-link active" : "nav-link"}><i class="fas fa-pen fa-lg"></i></a>
-		  <a href="/about" class={path.startsWith("/about") ? "nav-link active" : "nav-link"}><i class="fas fa-user fa-lg"></i></a>
+			<a href="/" class={path == "/" ? "nav-link active" : "nav-link"}>
+				<i class="fas fa-home fa-lg"></i>
+			</a>
+			<a href="/writing" class={path.startsWith("/writing") ? "nav-link active" : "nav-link"}>
+				<i class="fas fa-pen fa-lg"></i>
+			</a>
+			<a href="/about" class={path.startsWith("/about") ? "nav-link active" : "nav-link"}>
+				<i class="fas fa-user fa-lg"></i>
+			</a>
+			<a href="/skills" class={path.startsWith("/skills") ? "nav-link active" : "nav-link"}>
+				<i class="fas fa-cogs fa-lg"></i>  <!-- Added skills icon -->
+			</a>
+			
+
 		</div>
 		<div class="hidden md:flex space-x-4">
 		  <a href="https://github.com/ritankarsaha" target="_blank" rel="noreferrer" class="social-link"><i class="fab fa-github fa-lg"></i></a>
