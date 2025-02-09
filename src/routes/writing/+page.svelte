@@ -24,28 +24,28 @@
 	<meta name="description" content={titles} />
 </svelte:head>
 
-<div class="min-h-screen bg-gradient-to-b from-gray-50 to-white py-16">
-	<div class="container mx-auto px-4 sm:px-6 lg:px-8">
-		<div class="text-center mb-12">
-			<h1 class="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 mb-6">
+<div class="min-h-screen bg-gradient-to-b from-gray-50 to-white py-20">
+	<div class="container mx-auto px-6 sm:px-8 lg:px-12 max-w-7xl">
+		<div class="text-center mb-16">
+			<h1 class="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 mb-8 tracking-tight">
 				Writing
 			</h1>
-			<p class="text-lg text-gray-600 max-w-2xl mx-auto">
+			<p class="text-lg text-gray-600 max-w-2xl mx-auto px-4">
 				My personal logs and thoughts on backend systems, Web3, cloud computing, and DevOps.
 			</p>
 		</div>
 
-		<div class="flex flex-wrap justify-center gap-2 mb-8 max-w-4xl mx-auto">
+		<div class="flex flex-wrap justify-center gap-3 mb-12 max-w-4xl mx-auto px-4">
 			{#each data.tags.split(",") as t}
 				{#if data.tag == t}
 					<SelectedTag text={t} />
 				{:else}
 					<Tag text={t} />
-				{/if} 
+				{/if}
 			{/each}
 		</div>
 
-		<div class="max-w-2xl mx-auto mb-12">
+		<div class="max-w-2xl mx-auto mb-16 px-4">
 			<div class="relative">
 				<input 
 					type="text" 
@@ -63,11 +63,11 @@
 
 		<PageBreak />
 
-		<div class="grid grid-cols-1 gap-8 max-w-4xl mx-auto">
+		<div class="grid grid-cols-1 gap-8 max-w-4xl mx-auto px-4">
 			{#each filterByTag(data, query) as post (post.slug)}
 				<div 
 					transition:fade="{{ duration: 300 }}"
-					class="transform transition-all duration-300 hover:scale-[1.02] hover:shadow-lg"
+					class="transform transition-all duration-300 hover:scale-[1.02] hover:shadow-lg rounded-xl overflow-hidden"
 				>
 					<Post post={post} />
 				</div>
