@@ -30,6 +30,11 @@
 				<i class="fas fa-cogs fa-lg"></i>  <!-- Added skills icon -->
 			</a>
 
+			<a href="/projects" class={path.startsWith("/projects") ? "nav-link active" : "nav-link"}>
+				<i class="fas fa-folder-open fa-lg"></i>
+			</a>
+			
+
 			<a href="/contributions" class={path.startsWith("/contributions") ? "nav-link active" : "nav-link"}>
 				<i class="fas fa-code-branch fa-lg"></i>
 			</a>
