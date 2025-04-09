@@ -41,6 +41,14 @@
       prLink: "https://github.com/dhiway/cord/pull/548"
     },
     {
+      title: "Consul Democracy PR #5931",
+      description: "Fixed Multitenancy postgresql extensions work for tenants",
+      language: "Ruby",
+      languageColor: "#ec160b",
+      prLink: "https://github.com/consuldemocracy/consuldemocracy/pull/5931"
+    },
+    
+    {
       title: "Nightwatch.js PR #4271",
       description: "Modified files to ensure proper error display during runtime.",
       language: "JavaScript",
