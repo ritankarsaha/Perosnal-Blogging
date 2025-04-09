@@ -75,7 +75,7 @@
 						</p>
 					</div>
 					
-					<div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+					<!-- <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
 						<h3 class="text-xl font-semibold mb-4 text-gray-900">Notable Projects</h3>
 						<ul class="space-y-3">
 							<li class="flex items-start">
@@ -91,7 +91,7 @@
 								<span>Contributor to <a target="_blank" rel="noreferrer" href="https://github.com/c2siorg/Webiu" class="text-blue-600 hover:text-blue-800 transition-colors font-medium">Webiu</a> - Open-source web UI toolkit.</span>
 							</li>
 						</ul>
-					</div>
+					</div> -->
 
 					<div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
 						<h3 class="text-xl font-semibold mb-4 text-gray-900">Technical Stack</h3>

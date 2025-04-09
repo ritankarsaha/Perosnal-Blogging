@@ -1,7 +1,5 @@
 <script>
-  import ContributionCard from '$lib/components/ContributionCard.svelte';
-  import { fade, fly, scale } from 'svelte/transition';
-  import { spring } from 'svelte/motion';
+  import { fly, scale } from 'svelte/transition';
   import { onMount } from 'svelte';
 
   const contributions = [
@@ -47,41 +45,51 @@
       languageColor: "#ec160b",
       prLink: "https://github.com/consuldemocracy/consuldemocracy/pull/5931"
     },
-    
     {
       title: "Nightwatch.js PR #4271",
-      description: "Modified files to ensure proper error display during runtime.",
+      description: "Fixed the problem of not displaying anything in the console when running selenium server without installing java first on the system.",
       language: "JavaScript",
-      languageColor: "#F1E05A", 
+      languageColor: "#F1E05A",
       prLink: "https://github.com/nightwatchjs/nightwatch/pull/4271"
     },
     {
-      title: "Webiu PR #93",
-      description: "Enhanced Contributors section for efficiency and readability.",
-      language: "JavaScript",
-      languageColor: "#F1E05A",
-      prLink: "https://github.com/c2siorg/Webiu/pull/93"
-    },
-    {
-      title: "Webiu PR #89",
-      description: "Fixed asynchronous errors in the codebase.",
+      title: "C2SI Webiu PR #89",
+      description: "Fixed the async errors persistent in the codebase.",
       language: "JavaScript",
       languageColor: "#F1E05A",
       prLink: "https://github.com/c2siorg/Webiu/pull/89"
+    },
+    {
+      title: "Alumni Website - Bitbyte TPC PR #160",
+      description: "Implemented Custom Logs for both environments - Development and Production",
+      language: "Django",
+      languageColor: "#092E20",
+      prLink: "https://github.com/BitByte-TPC/alumni/pull/160"
+    },
+    {
+      title: "MyLeave - Bitbyte TPC PR #5",
+      description: "Made the changes to the necessary XML for handling login activity",
+      language: "Kotlin",
+      languageColor: "#A97BFF",
+      prLink: "https://github.com/bsoc-bitbyte/myLeave/pull/5"
     }
   ];
 
   let visible = false;
   let hoveredCard = null;
-  
+
   onMount(() => {
     visible = true;
   });
 
-  const groupedContributions = {
-    Rust: contributions.filter(pr => pr.language === "Rust"),
-    JavaScript: contributions.filter(pr => pr.language === "JavaScript")
-  };
+  // Dynamically group contributions by language
+  const groupedContributions = {};
+  for (const pr of contributions) {
+    if (!groupedContributions[pr.language]) {
+      groupedContributions[pr.language] = [];
+    }
+    groupedContributions[pr.language].push(pr);
+  }
 
   function handleCardHover(index) {
     hoveredCard = index;
@@ -104,7 +112,7 @@
   <div class="max-w-6xl mx-auto">
     {#if visible}
       <!-- Header Section -->
-      <div class="mb-16" in:fly="{{ y: 50, duration: 1000 }}">
+      <div class="mb-16" in:fly={{ y: 50, duration: 1000 }}>
         <div class="flex flex-col items-center text-center mb-8">
           <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-6"></div>
           <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">
@@ -117,58 +125,13 @@
         </div>
       </div>
 
-      <!-- Stats Section -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16" 
-           in:fly="{{ y: 50, duration: 1000, delay: 200 }}">
-        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
-          <div class="flex flex-col items-center text-center">
-            <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mb-3">
-              <span class="text-blue-600 font-bold">{contributions.length}</span>
-            </div>
-            <p class="text-2xl font-bold text-blue-600 mb-1">{contributions.length}</p>
-            <p class="text-sm text-gray-500 uppercase tracking-wider">Total PRs</p>
-          </div>
-        </div>
-        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
-          <div class="flex flex-col items-center text-center">
-            <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center mb-3">
-              <span class="text-purple-600 font-bold">3</span>
-            </div>
-            <p class="text-2xl font-bold text-purple-600 mb-1">3</p>
-            <p class="text-sm text-gray-500 uppercase tracking-wider">Projects</p>
-          </div>
-        </div>
-        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
-          <div class="flex flex-col items-center text-center">
-            <div class="w-12 h-12 rounded-full flex items-center justify-center mb-3" style="background-color: rgba(222, 165, 132, 0.2);">
-              <span style="color: #DEA584; font-weight: bold;">{groupedContributions.Rust.length}</span>
-            </div>
-            <p class="text-2xl font-bold mb-1" style="color: #DEA584;">
-              {groupedContributions.Rust.length}
-            </p>
-            <p class="text-sm text-gray-500 uppercase tracking-wider">Rust PRs</p>
-          </div>
-        </div>
-        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
-          <div class="flex flex-col items-center text-center">
-            <div class="w-12 h-12 rounded-full flex items-center justify-center mb-3" style="background-color: rgba(241, 224, 90, 0.2);">
-              <span style="color: #F1E05A; font-weight: bold;">{groupedContributions.JavaScript.length}</span>
-            </div>
-            <p class="text-2xl font-bold mb-1" style="color: #F1E05A;">
-              {groupedContributions.JavaScript.length}
-            </p>
-            <p class="text-sm text-gray-500 uppercase tracking-wider">JavaScript PRs</p>
-          </div>
-        </div>
-      </div>
-
       <!-- Contributions Grid -->
       {#each Object.entries(groupedContributions) as [lang, prs], i}
-        <div class="mb-16" in:fly="{{ y: 50, duration: 1000, delay: 300 + i * 100 }}">
+        <div class="mb-16" in:fly={{ y: 50, duration: 1000, delay: 300 + i * 100 }}>
           <div class="flex items-center mb-8">
             <div class="w-14 h-14 rounded-full flex items-center justify-center mr-4 bg-white shadow-md p-1">
               <div class="w-10 h-10 rounded-full flex items-center justify-center" 
-                   style="background-color: {lang === 'Rust' ? '#DEA584' : '#F1E05A'};">
+                   style="background-color: {prs[0].languageColor};">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                   <rect x="2" y="9" width="4" height="12"></rect>
@@ -183,7 +146,7 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             {#each prs as pr, j}
               <div 
-                in:scale="{{ duration: 400, delay: 400 + (i * 100) + (j * 50), start: 0.95 }}"
+                in:scale={{ duration: 400, delay: 400 + (i * 100) + (j * 50), start: 0.95 }}
                 on:mouseenter={() => handleCardHover(`${i}-${j}`)}
                 on:mouseleave={handleCardLeave}
                 class="transform transition-all duration-300 {hoveredCard === `${i}-${j}` ? 'scale-102' : ''}"
@@ -232,7 +195,7 @@
     padding: 0;
     font-family: 'Inter', sans-serif;
   }
-  
+
   :global(*) {
     box-sizing: border-box;
   }
