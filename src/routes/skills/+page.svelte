@@ -32,7 +32,7 @@
     { img: "/skill/graphql.png", name: "GraphQL" },
     { img: "/skill/fastapi.png", name: "FastAPI" },
     { img: "/skill/firebase.png", name: "Firebase" },
-    { img: "/skill/nextauth.png", name: "NextAuth" },
+    { img: "/skill/nextauth.jpeg", name: "NextAuth" },
   ];
 
   const toolList = [
