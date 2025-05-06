@@ -42,22 +42,22 @@
 				<!-- Desktop Navigation -->
 				<div class="hidden md:flex space-x-8">
 					<a href="/" class="{path == '/' ? 'nav-link active' : 'nav-link'}">
-						<i class="fas fa-home mr-1"></i> Home
+						<i class="fas fa-home mr-1"></i>
 					</a>
 					<a href="/writing" class="{path.startsWith('/writing') ? 'nav-link active' : 'nav-link'}">
-						<i class="fas fa-pen mr-1"></i> Writing
+						<i class="fas fa-pen mr-1"></i> 
 					</a>
 					<a href="/about" class="{path.startsWith('/about') ? 'nav-link active' : 'nav-link'}">
-						<i class="fas fa-user mr-1"></i> About
+						<i class="fas fa-user mr-1"></i> 
 					</a>
 					<a href="/skills" class="{path.startsWith('/skills') ? 'nav-link active' : 'nav-link'}">
-						<i class="fas fa-cogs mr-1"></i> Skills
+						<i class="fas fa-cogs mr-1"></i> 
 					</a>
 					<a href="/projects" class="{path.startsWith('/projects') ? 'nav-link active' : 'nav-link'}">
-						<i class="fas fa-folder-open mr-1"></i> Projects
+						<i class="fas fa-folder-open mr-1"></i> 
 					</a>
 					<a href="/contributions" class="{path.startsWith('/contributions') ? 'nav-link active' : 'nav-link'}">
-						<i class="fas fa-code-branch mr-1"></i> Contributions
+						<i class="fas fa-code-branch mr-1"></i> 
 					</a>
 				</div>
 				
