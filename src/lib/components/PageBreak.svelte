@@ -1,1 +1,1 @@
-<div class={`w-full h-[1px] min-h-[1px] bg-[#ebebeb] my-5`} />
+<div class="w-full h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent my-8" />

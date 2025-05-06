@@ -48,6 +48,7 @@
 		"rehype-postfix-footnote-anchors": "^2.0.3",
 		"rehype-prism-plus": "^2.0.0",
 		"sharp": "^0.33.2",
-		"sveltekit-tweet": "^0.0.17"
+		"sveltekit-tweet": "^0.0.17",
+		"tailwindcss-animate": "^1.0.7"
 	}
 }

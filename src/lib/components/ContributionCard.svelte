@@ -17,14 +17,14 @@
     };
 </script>
 
-<div class="transform hover:-translate-y-2 transition-all duration-300 block"
+<div class="transform transition-all duration-300 h-full"
      on:mouseenter={() => isHovered = true}
      on:mouseleave={() => isHovered = false}>
-    <div class="relative flex flex-col bg-white shadow-lg rounded-xl p-6 
-                hover:shadow-2xl transition-all border border-gray-200/50 
-                overflow-hidden group backdrop-blur-sm">
+    <div class="relative h-full flex flex-col bg-white shadow-sm hover:shadow-lg rounded-xl p-6 
+                border border-gray-100 hover:border-primary-100 overflow-hidden group
+                {isHovered ? 'translate-y-[-4px]' : ''}">
         <!-- Animated Background Pattern -->
-        <div class="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity duration-300">
+        <div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500">
             <div class="absolute top-0 right-0 w-40 h-40 transform translate-x-20 -translate-y-20 
                         rounded-full blur-2xl"
                  style="background-color: {languageColor};">
@@ -36,7 +36,7 @@
         </div>
 
         <!-- Content -->
-        <div class="relative z-10">
+        <div class="relative z-10 h-full flex flex-col">
             <!-- Header -->
             <div class="flex justify-between items-start mb-4">
                 <div class="flex-1">
@@ -50,14 +50,13 @@
                         </span>
                     </div>
                     <!-- Repo Name -->
-                    <h2 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 
+                    <h2 class="text-lg font-semibold text-gray-900 group-hover:text-primary-600 
                              transition-colors tracking-tight">
                         {getRepoName(title)}
                     </h2>
                 </div>
                 <!-- Language Badge -->
-                <div class="flex items-center px-3 py-1.5 rounded-full bg-gray-50 
-                          group-hover:bg-opacity-70 transition-all"
+                <div class="flex items-center px-3 py-1.5 rounded-full"
                      style="background-color: {languageColor}20">
                     <span class="w-2.5 h-2.5 rounded-full mr-2" 
                           style="background-color: {languageColor};">
@@ -70,17 +69,17 @@
             </div>
 
             <!-- Description -->
-            <p class="text-gray-600 mb-6 line-clamp-2 leading-relaxed">
+            <p class="text-gray-600 mb-6 line-clamp-2 leading-relaxed flex-grow">
                 {description}
             </p>
 
             <!-- Footer -->
-            <div class="flex justify-between items-center pt-2 border-t border-gray-100">
+            <div class="flex justify-between items-center pt-2 border-t border-gray-100 mt-auto">
                 <a href={prLink} 
                    target="_blank"
-                   class="flex items-center text-sm font-medium text-blue-600 
+                   class="flex items-center text-sm font-medium text-primary-600 
                           opacity-0 group-hover:opacity-100 transition-all duration-300
-                          hover:text-blue-700">
+                          hover:text-primary-700">
                     View Pull Request
                     <svg 
                         class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" 
@@ -94,18 +93,10 @@
                 </a>
                 <!-- Merge Status Indicator -->
                 <div class="flex items-center">
-                    <span class="flex w-2 h-2 rounded-full bg-green-400"></span>
+                    <span class="flex w-2 h-2 rounded-full bg-accent-500"></span>
                     <span class="ml-2 text-xs text-gray-500">Merged</span>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-<style>
-    /* Optional: Add custom styles for better blur support */
-    .backdrop-blur-sm {
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
-    }
-</style>

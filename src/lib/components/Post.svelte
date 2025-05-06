@@ -1,19 +1,29 @@
 <script>
 	export let post;
 	import Tag from '$lib/components/Tag.svelte';
-			import { formatDate } from '$lib/utils';
+	import { formatDate } from '$lib/utils';
 </script>
 
-<div class="mb-6">
-		<a href={`/writing/${post.slug}`} class="flex flex-col hover:no-underline cursor-pointer">
-	    <h3 class="text-[#252525]">{post.title}</h3>
-  	  <p class="!my-0 !mb-1 text-[#666666] text-[15px] sm:text-[16px] leading-5 sm:leading-[1.7rem] md:text-[17px]">{post.description}</p>
-		</a>
-    <div class="flex flex-row items-center flex-wrap wrap">
-    	<code class="text-[14px] sm:text-[15px]">{formatDate(new Date(post.date))}</code>
-      	<code class="text-[14px] sm:text-[15px] mx-2 text-[#aaaaaa]">•</code>
-		{#each post.tags as tag}
-			<Tag text={tag} />
-  		{/each}
-    </div>
+<div class="group">
+	<a href={`/writing/${post.slug}`} class="block p-6 rounded-xl border border-gray-100 bg-white shadow-sm hover:shadow-md hover:border-primary-100 transition-all duration-300 hover:-translate-y-1">
+		<h3 class="text-xl font-display font-semibold text-gray-900 group-hover:text-primary-600 transition-colors duration-200 mb-2">
+			{post.title}
+		</h3>
+		<p class="text-gray-600 mb-4 line-clamp-2">{post.description}</p>
+		
+		<div class="flex flex-wrap items-center gap-2">
+			<span class="inline-flex items-center text-xs font-medium text-gray-500">
+				<i class="far fa-calendar-alt mr-1.5"></i>
+				{formatDate(new Date(post.date))}
+			</span>
+			
+			<span class="text-gray-300 mx-1">•</span>
+			
+			<div class="flex flex-wrap gap-1.5">
+				{#each post.tags as tag}
+					<Tag text={tag} />
+				{/each}
+			</div>
+		</div>
+	</a>
 </div>

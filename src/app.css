@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 @import '@fortawesome/fontawesome-free/css/all.min.css';
 
@@ -5,20 +7,50 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --primary: 201 96% 32%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 201 96% 32%;
+  --radius: 0.75rem;
+}
+
 html {
-  font-family: "Charter";
-  font-weight: normal;
-  color: #181818;
+  font-family: 'Inter', sans-serif;
+  color: #1a1a1a;
   background: #fcfcfc;
+  scroll-behavior: smooth;
 } 
 
+body {
+  @apply antialiased;
+  background-image: 
+    radial-gradient(at 100% 0%, hsla(201, 96%, 32%, 0.05) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(250, 84%, 54%, 0.05) 0px, transparent 50%);
+  background-attachment: fixed;
+}
+
 p a {
-  color: #0471d7;
+  @apply text-primary-600 transition-colors duration-200;
 }
 
 p a:hover {
-  text-decoration: underline;
-  cursor: pointer;
+  @apply text-primary-700 underline;
 }
 
 * {
@@ -29,392 +61,147 @@ p a:hover {
 
 @layer base {
   h1 {
-    @apply text-xl;
+    @apply font-display text-xxl font-bold tracking-tight;
   }
   h2 {
-    @apply text-lg flex flex-row-reverse items-center justify-end mt-3;
+    @apply font-display text-xl font-semibold tracking-tight;
   }
   h3 {
-    @apply text-sm;
+    @apply font-display text-lg font-medium;
   }
 
   article h3, strong, b {
-    color: #303030;
-    @apply font-bold;
-    letter-spacing: 0.1px;
-  }
-
-  article strong span {
-    font-weight: 600;
-  }
-
-  strong, b {
-    @apply text-[16px];
+    @apply font-semibold text-gray-800;
   }
 
   p, li {
-    @apply text-sm;
+    @apply text-gray-700 leading-relaxed;
   }
 
   code {
-    @apply text-xs;
-  }
-
-  nav a * {
-    @apply text-[15px] !important;
-  }
-
-  span:not(.katex-display span) {
-    color: #333333;
-    font-size: 100%;
-  }
-
-  p {
-    margin-top: 5px;
-    margin-bottom: 15px;
-  }
-  
-  pre[class*=language-] {
-    @apply bg-white rounded-lg w-full text-[12px] mb-6;
-    line-height: 1.2rem;
-    font-family: "Roboto Mono";
-    border: 1px solid #ebebeb;
-  }
-  
-  ul {
-    @apply list-disc;
-  }
-  
-  ul li {
-    @apply ml-8 mb-1;
-  }
-  
-  ol {
-    @apply list-decimal;
-  }
-  
-  ol li {
-    @apply ml-8 mb-1;
-  }
-
-  @media (min-width: theme('screens.sm')) {
-    h1 {
-      @apply text-xxl;
-      line-height: 2rem;
-    }
-    h2 {
-      @apply text-xl;
-    }
-    h3 {
-      @apply text-[20px];
-    }
-
-    nav a * {
-      @apply text-[16px] !important;
-    }
-
-    p, li {
-      @apply text-base;
-    }
-
-    code {
-      @apply text-sm;
-    }
-
-    strong, b {
-      @apply text-[18px];
-    }
-
-    pre[class*=language-] {
-      @apply text-xxxs !important;
-      line-height: 1.5rem;
-    }
+    @apply font-mono text-sm bg-gray-50 px-1.5 py-0.5 rounded border border-gray-100;
   }
 }
 
-code {
-  font-family: "Roboto Mono";
-  color: #777777;
+/* Card hover effects */
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
 }
 
-li::marker {
-  font-weight: 600;
+/* Button styles */
+.btn {
+  @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors 
+  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2 
+  disabled:opacity-50 disabled:pointer-events-none;
 }
 
-a:hover {
-  cursor: pointer;
-  text-decoration: underline;
+.btn-primary {
+  @apply bg-primary-600 text-white hover:bg-primary-700;
 }
 
-a {
-  color: #0471d7;
+.btn-secondary {
+  @apply bg-secondary-100 text-secondary-900 hover:bg-secondary-200;
 }
 
-h2:hover .icon {
-  display: block;
-  margin-left: 10px;
-  background-image: url("$lib/assets/link.png");
-  background-size: 16px 16px;
-  cursor: pointer;
+.btn-outline {
+  @apply border border-gray-200 bg-white hover:bg-gray-50 text-gray-800;
 }
 
-.icon-link, .icon {
-  height: 16px;
-  width: 16px;
-  margin-right: 0px;
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
 }
 
-article ul, article ol {
-  margin-bottom: 10px;
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 rounded-full;
 }
 
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full hover:bg-primary-400 transition-colors duration-200;
+}
+
+/* Glass effect */
+.glass {
+  @apply bg-white bg-opacity-70 backdrop-blur-md border border-white border-opacity-20 shadow-sm;
+}
+
+/* Gradient text */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-secondary-600;
+}
+
+/* Animation utilities */
+.animate-in {
+  animation: animateIn 0.3s ease forwards;
+}
+
+@keyframes animateIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Article styling */
 article {
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  overflow: hidden;
-}
-
-article table {
-  margin-top: 10px;
-  display: block;
-  max-width: 100%;
-  overflow-x: scroll !important;
-}
-
-article div {
-  display: block;
-  max-width: 100%;
-  overflow-x: scroll;
-}
-
-article p, article * li, article ul, article ol, article h2, article h3, article h1, article hr, article blockquote {
-  width: 100%;
-  max-width: 100%;
-}
-
-article * li {
-  max-width: calc(100% - 2rem);
-}
-
-article hr {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-article th {
-  border: 1px solid #aaaaaa;
-  padding: 2px 10px;
-}
-
-article td {
-  border: 1px solid #aaaaaa;
-  padding: 2px 10px;
-}
-
-article blockquote {
-  border-left: 3px solid #dddddd;
-}
-
-article blockquote p {
-  font-family: "Charter";
-  font-style: italic;
-  color: #666666;
-  font-size: 20px;
-  margin: 0 20px;
-}
-
-article blockquote p b {
-  font-family: "Charter";
-  font-style: normal;
-  color: #181818;
-  font-weight: 500;
-  font-size: 18px;
-}
-
-article code:not(pre code) {
-  border: 1px solid #ebebeb;
-  background: white;
-  color: #444444 !important;
-  padding: 3px 7px;
-  border-radius: 10px;
+  @apply max-w-full overflow-hidden;
 }
 
 article p {
-  margin: 9px 0;
+  @apply my-4;
 }
 
-article ol, article ul {
-  margin-top: -5px;
+article h2 {
+  @apply mt-8 mb-4;
 }
 
-article h2, article h3 {
-  margin-bottom: -7px !important;
+article h3 {
+  @apply mt-6 mb-3;
+}
+
+article ul, article ol {
+  @apply my-4 ml-6;
+}
+
+article ul li {
+  @apply mb-2 list-disc;
+}
+
+article ol li {
+  @apply mb-2 list-decimal;
 }
 
 article img {
-  border: 1px solid #ebebeb;
-  border-radius: 10px;
+  @apply rounded-lg border border-gray-100 my-6 max-w-full;
 }
 
-pre::-webkit-scrollbar {
-  height: 8px;
-  width: 10px;
-  border-radius: 9999px;
-  background: #ebebeb;
+article blockquote {
+  @apply pl-4 border-l-4 border-gray-200 italic my-6 text-gray-600;
 }
 
-pre::-webkit-scrollbar-track {
-  background: #fbfbfb;
-  border-radius: 10px;
+article pre {
+  @apply p-4 rounded-lg bg-gray-800 text-gray-100 overflow-x-auto my-6;
 }
 
-pre::-webkit-scrollbar-thumb {
-  background: #ebebeb;
-  border-radius: 16px;
+article code:not(pre code) {
+  @apply bg-gray-50 px-1.5 py-0.5 rounded text-gray-800 border border-gray-100;
 }
 
-pre::-webkit-scrollbar-thumb:hover {
-  background: #0471d7;
+/* Navigation */
+.nav-link {
+  @apply text-gray-600 hover:text-primary-600 transition-colors duration-200;
 }
 
-@font-face {
-  font-family: 'Charter';
-  src: url('/fonts/Charter.woff2') format('woff2'),
-       url('/fonts/Charter.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+.nav-link.active {
+  @apply text-primary-700 font-medium;
 }
 
-@font-face {
-  font-family: 'Charter';
-  src: url('/fonts/Charter-BoldItalic.woff2') format('woff2'),
-       url('/fonts/Charter-BoldItalic.woff') format('woff');
-  font-weight: bold;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Charter';
-  src: url('/fonts/Charter-Bold.woff2') format('woff2'),
-       url('/fonts/Charter-Bold.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Charter';
-  src: url('/fonts/Charter-Italic.woff2') format('woff2'),
-       url('/fonts/Charter-Italic.woff') format('woff');
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-}
-
-.react-tweet-theme {
-  --tweet-container-margin: 1.5rem 0;
-  --tweet-header-font-size: 0.9375rem;
-  --tweet-header-line-height: 1.25rem;
-  --tweet-body-font-size: 1.25rem;
-  --tweet-body-font-weight: 400;
-  --tweet-body-line-height: 1.5rem;
-  --tweet-body-margin: 0;
-  --tweet-quoted-container-margin: 0.75rem 0;
-  --tweet-quoted-body-font-size: 0.938rem;
-  --tweet-quoted-body-font-weight: 400;
-  --tweet-quoted-body-line-height: 1.25rem;
-  --tweet-quoted-body-margin: 0.25rem 0 0.75rem 0;
-  --tweet-info-font-size: 0.9375rem;
-  --tweet-info-line-height: 1.25rem;
-  --tweet-actions-font-size: 0.875rem;
-  --tweet-actions-line-height: 1rem;
-  --tweet-actions-font-weight: 700;
-  --tweet-actions-icon-size: 1.25em;
-  --tweet-actions-icon-wrapper-size: calc(var(--tweet-actions-icon-size) + 0.75em);
-  --tweet-replies-font-size: 0.875rem;
-  --tweet-replies-line-height: 1rem;
-  --tweet-replies-font-weight: 700;
-}
-
-:where(.react-tweet-theme) * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-:is([data-theme='light'], .light) :where(.react-tweet-theme),
-:where(.react-tweet-theme) {
-  --tweet-skeleton-gradient: linear-gradient(270deg, #fafafa, #eaeaea, #eaeaea, #fafafa);
-  --tweet-border: 1px solid rgb(207, 217, 222);
-  --tweet-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  --tweet-font-color: rgb(15, 20, 25);
-  --tweet-font-color-secondary: rgb(83, 100, 113);
-  --tweet-bg-color: #fff;
-  --tweet-bg-color-hover: rgb(247, 249, 249);
-  --tweet-quoted-bg-color-hover: rgba(0, 0, 0, 0.03);
-  --tweet-color-blue-primary: rgb(29, 155, 240);
-  --tweet-color-blue-primary-hover: rgb(26, 140, 216);
-  --tweet-color-blue-secondary: rgb(0, 111, 214);
-  --tweet-color-blue-secondary-hover: rgba(0, 111, 214, 0.1);
-  --tweet-color-red-primary: rgb(249, 24, 128);
-  --tweet-color-red-primary-hover: rgba(249, 24, 128, 0.1);
-  --tweet-color-green-primary: rgb(0, 186, 124);
-  --tweet-color-green-primary-hover: rgba(0, 186, 124, 0.1);
-  --tweet-twitter-icon-color: var(--tweet-font-color);
-  --tweet-verified-old-color: rgb(130, 154, 171);
-  --tweet-verified-blue-color: var(--tweet-color-blue-primary);
-}
-
-:is([data-theme='dark'], .dark) :where(.react-tweet-theme) {
-  --tweet-skeleton-gradient: linear-gradient(270deg, #15202b, rgb(30, 39, 50), rgb(30, 39, 50), rgb(21, 32, 43));
-  --tweet-border: 1px solid rgb(66, 83, 100);
-  --tweet-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  --tweet-font-color: rgb(247, 249, 249);
-  --tweet-font-color-secondary: rgb(139, 152, 165);
-  --tweet-bg-color: rgb(21, 32, 43);
-  --tweet-bg-color-hover: rgb(30, 39, 50);
-  --tweet-quoted-bg-color-hover: rgba(255, 255, 255, 0.03);
-  --tweet-color-blue-primary: rgb(29, 155, 240);
-  --tweet-color-blue-primary-hover: rgb(26, 140, 216);
-  --tweet-color-blue-secondary: rgb(107, 201, 251);
-  --tweet-color-blue-secondary-hover: rgba(107, 201, 251, 0.1);
-  --tweet-color-red-primary: rgb(249, 24, 128);
-  --tweet-color-red-primary-hover: rgba(249, 24, 128, 0.1);
-  --tweet-color-green-primary: rgb(0, 186, 124);
-  --tweet-color-green-primary-hover: rgba(0, 186, 124, 0.1);
-  --tweet-twitter-icon-color: var(--tweet-font-color);
-  --tweet-verified-old-color: rgb(130, 154, 171);
-  --tweet-verified-blue-color: #fff;
-}
-
-.verified {
-  margin-left: 0.125rem;
-  max-width: 20px;
-  max-height: 20px;
-  height: 1.25em;
-  fill: currentColor;
-  user-select: none;
-  vertical-align: text-bottom;
-}
-
-.article {
-  display: block;
-}
-
-.article .info {
-  overflow: hidden;
-}
-
-.article .author .authorMeta span {
-  color: #777777 !important;
-}
-
-.react-tweet-theme {
-  padding: 0;
-  margin: 0 !important;
+/* Social links */
+.social-link {
+  @apply text-gray-500 hover:text-primary-600 transition-colors duration-200;
 }
