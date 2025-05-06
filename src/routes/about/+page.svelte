@@ -7,7 +7,7 @@
 	<meta name="description" content="I'm an aspiring Web3 and Cloud Engineer with expertise in event-driven programming, Golang, and Kafka." />
   </svelte:head>
   
-  <div class="min-h-screen bg-gray-100 flex justify-start items-start p-10">
+  <div class="min-h-screen bg-gray-100 flex justify-center items-start p-10">
 	<div class="w-full max-w-4xl bg-white shadow-md rounded-lg p-8 flex flex-row items-start space-x-8">
 	  <!-- Profile Image -->
 	  <img 
@@ -26,9 +26,9 @@
 		  </p>
 		  
 		  <p class="text-gray-700 leading-relaxed">
-			Currently, I'm working with <span class="font-medium">Apache Kafka</span> , <span class="font-medium">Golang and Rust</span>, designing <span class="font-medium">scalable event-driven microservices</span> for real-time data streaming and <span class="font-medium">high-throughput applications</span>.
+			Currently, I'm working with <span class="font-medium">Apache Kafka</span>, <span class="font-medium">Golang and Rust</span>, designing <span class="font-medium">scalable event-driven microservices</span> for real-time data streaming and <span class="font-medium">high-throughput applications</span>.
 		  </p>
-
+  
 		  <p class="text-gray-700 leading-relaxed">
 			I am also exploring the world of <span class="font-medium">Web3 development</span> and <span class="font-medium">blockchain technologies</span>, building decentralized applications and smart contracts on the Ethereum and Solana blockchain.
 		  </p>
@@ -39,28 +39,24 @@
 		  <h2 class="text-xl font-semibold text-gray-900 mb-4">My Interests</h2>
 		  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 			<div class="bg-blue-50 p-4 rounded-lg hover:bg-blue-100 transition-colors duration-300">
-			  <div class="flex flex-col space-y-3">
-				<div class="space-y-2">
-				  <p class="text-gray-800 font-medium">Development</p>
-				  <p class="text-gray-600 text-sm">Event-Driven Programming - Kafka & RabbitMQ</p>
-				  <p class="text-gray-600 text-sm">Golang and Rust for System Programming</p>
-				  <p class="text-gray-600 text-sm">Core Web3 Development</p>
-				  <p class="text-gray-600 text-sm">Backend Web Development</p>
-				</div>
-			  </div>
+			  <p class="text-gray-800 font-medium">Development</p>
+			  <ul class="mt-2 space-y-1 text-gray-600 text-sm">
+				<li>Event-Driven Programming - Kafka & RabbitMQ</li>
+				<li>Golang and Rust for System Programming</li>
+				<li>Core Web3 Development</li>
+				<li>Backend Web Development</li>
+			  </ul>
 			</div>
 			
 			<div class="bg-purple-50 p-4 rounded-lg hover:bg-purple-100 transition-colors duration-300">
-			  <div class="flex flex-col space-y-3">
-				<div class="space-y-2">
-				  <p class="text-gray-800 font-medium">Engineering</p>
-				  <p class="text-gray-600 text-sm">Cloud Engineering</p>
-				  <p class="text-gray-600 text-sm">Microservices & DevOps</p>
-				  <p class="text-gray-600 text-sm">System Design & Scalability</p>
-				  <p class="text-gray-600 text-sm">Computer Networking</p>
-				  <p class="text-gray-600 text-sm">Machine Learning</p>
-				</div>
-			  </div>
+			  <p class="text-gray-800 font-medium">Engineering</p>
+			  <ul class="mt-2 space-y-1 text-gray-600 text-sm">
+				<li>Cloud Engineering</li>
+				<li>Microservices & DevOps</li>
+				<li>System Design & Scalability</li>
+				<li>Computer Networking</li>
+				<li>Machine Learning</li>
+			  </ul>
 			</div>
 		  </div>
 		</div>
@@ -83,7 +79,7 @@
   </div>
   
   <style>
-	/* Additional custom styles if needed */
+	/* Reset body spacing */
 	:global(body) {
 	  margin: 0;
 	  padding: 0;
@@ -99,3 +95,4 @@
 	  transition: all 0.3s ease;
 	}
   </style>
+  

@@ -4,12 +4,18 @@
 	import PageBreak from '$lib/components/PageBreak.svelte';
 	import SelectedTag from '$lib/components/SelectedTag.svelte';
 	import Post from '$lib/components/Post.svelte';
-	import { fade } from 'svelte/transition';
+	import { fade, fly } from 'svelte/transition';
+	import { onMount } from 'svelte';
 
 	export let data: PageData;
 
 	let query = "";
 	let titles = data.posts.map(x => x.title).slice(0, 3).join(" • ");
+	let visible = false;
+
+	onMount(() => {
+		visible = true;
+	});
 
 	const filterByTag = (data, query: string) => {
 		if(data.tag === null) {
@@ -20,66 +26,89 @@
 </script>
 
 <svelte:head>
-	<title>Writing Ritankar Saha</title>
+	<title>Writing | Ritankar Saha</title>
 	<meta name="description" content={titles} />
 </svelte:head>
 
-<div class="min-h-screen bg-gradient-to-b from-gray-50 to-white py-20">
-	<div class="container mx-auto px-6 sm:px-8 lg:px-12 max-w-7xl">
-		<div class="text-center mb-16">
-			<h1 class="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 mb-8 tracking-tight">
-				Writing
-			</h1>
-			<p class="text-lg text-gray-600 max-w-2xl mx-auto px-4">
-				My personal logs and thoughts on backend systems, Web3, cloud computing, and DevOps.
-			</p>
+<div class="min-h-screen">
+	<!-- Hero Section -->
+	<section class="relative py-20 overflow-hidden">
+		<div class="absolute inset-0 bg-gradient-to-br from-primary-50 to-secondary-50 opacity-70"></div>
+		<div class="absolute inset-0 opacity-20">
+			<div class="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:20px_20px]"></div>
 		</div>
+		
+		<div class="container mx-auto px-6 relative z-10">
+			{#if visible}
+				<div class="max-w-4xl mx-auto text-center" in:fly={{ y: 50, duration: 1000 }}>
+					<h1 class="text-4xl md:text-5xl font-bold mb-6">
+						<span class="gradient-text">Writing</span>
+					</h1>
+					
+					<p class="text-xl text-gray-700 mb-8 leading-relaxed">
+						My personal logs and thoughts on backend systems, Web3, cloud computing, and DevOps.
+					</p>
+				</div>
+			{/if}
+		</div>
+	</section>
 
-		<div class="flex flex-wrap justify-center gap-3 mb-12 max-w-4xl mx-auto px-4">
-			{#each data.tags.split(",") as t}
-				{#if data.tag == t}
-					<SelectedTag text={t} />
-				{:else}
-					<Tag text={t} />
+	<!-- Tags Section -->
+	<section class="py-10 bg-white">
+		<div class="container mx-auto px-6">
+			{#if visible}
+				<div class="flex flex-wrap justify-center gap-3 mb-8 max-w-4xl mx-auto" in:fly={{ y: 30, duration: 800, delay: 200 }}>
+					{#each data.tags.split(",") as t}
+						{#if data.tag == t}
+							<SelectedTag text={t} />
+						{:else}
+							<Tag text={t} />
+						{/if}
+					{/each}
+				</div>
+				
+				<div class="max-w-2xl mx-auto mb-12" in:fly={{ y: 30, duration: 800, delay: 300 }}>
+					<div class="relative">
+						<input 
+							type="text" 
+							class="w-full h-14 pl-12 pr-5 rounded-full border-2 border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-all duration-300 text-gray-700 placeholder-gray-400"
+							placeholder="Search by title or tag..."
+							bind:value={query}
+						/>
+						<div class="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400">
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+							</svg>
+						</div>
+					</div>
+				</div>
+			{/if}
+		</div>
+	</section>
+
+	<!-- Posts Section -->
+	<section class="py-10 bg-white">
+		<div class="container mx-auto px-6">
+			{#if visible}
+				<div class="grid grid-cols-1 gap-8 max-w-4xl mx-auto">
+					{#each filterByTag(data, query) as post, i (post.slug)}
+						<div 
+							in:fly={{ y: 20, duration: 600, delay: 400 + i * 100 }}
+							class="transform transition-all duration-300"
+						>
+							<Post {post} />
+						</div>
+					{/each}
+				</div>
+
+				{#if filterByTag(data, query).length === 0}
+					<div class="text-center py-16" in:fade={{ duration: 800, delay: 400 }}>
+						<p class="text-2xl text-gray-500">No posts found matching your search.</p>
+					</div>
 				{/if}
-			{/each}
+			{/if}
 		</div>
-
-		<div class="max-w-2xl mx-auto mb-16 px-4">
-			<div class="relative">
-				<input 
-					type="text" 
-					class="w-full h-14 pl-12 pr-5 rounded-full border-2 border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 text-gray-700 placeholder-gray-400"
-					placeholder="Search by title or tag..."
-					bind:value={query}
-				/>
-				<div class="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400">
-					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-					</svg>
-				</div>
-			</div>
-		</div>
-
-		<PageBreak />
-
-		<div class="grid grid-cols-1 gap-8 max-w-4xl mx-auto px-4">
-			{#each filterByTag(data, query) as post (post.slug)}
-				<div 
-					transition:fade="{{ duration: 300 }}"
-					class="transform transition-all duration-300 hover:scale-[1.02] hover:shadow-lg rounded-xl overflow-hidden"
-				>
-					<Post post={post} />
-				</div>
-			{/each}
-		</div>
-
-		{#if filterByTag(data, query).length === 0}
-			<div class="text-center py-16">
-				<p class="text-2xl text-gray-500">No posts found matching your search.</p>
-			</div>
-		{/if}
-	</div>
+	</section>
 </div>
 
 <style>

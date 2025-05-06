@@ -2,147 +2,207 @@
 	import PageBreak from '$lib/components/PageBreak.svelte';
 	import type { PageData } from './$types';
 	import Post from '$lib/components/Post.svelte';
+	import { onMount } from 'svelte';
+	import { fly, fade } from 'svelte/transition';
 
 	export let data: PageData = { posts: [] };
+	
+	let visible = false;
+	
+	onMount(() => {
+		visible = true;
+	});
 </script>
 
 <svelte:head>
-	<title>Personal Website of Ritankar Saha</title>
-	<meta name="description" content="The personal blogging website of Ritankar Saha, a backend, cloud, and Web3 engineer passionate about event-driven systems and distributed computing." />
+	<title>Ritankar Saha | Backend, Cloud & Web3 Engineer</title>
+	<meta name="description" content="The personal website of Ritankar Saha, a backend, cloud, and Web3 engineer passionate about event-driven systems and distributed computing." />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="" />
-	<meta property="og:title" content="Personal Website & Blog of Ritankar Saha" />
-	<meta property="og:description" content="The personal website and blog of Ritankar Saha, a backend, cloud, and Web3 engineer passionate about event-driven systems and distributed computing." />
+	<meta property="og:title" content="Ritankar Saha | Backend, Cloud & Web3 Engineer" />
+	<meta property="og:description" content="The personal website of Ritankar Saha, a backend, cloud, and Web3 engineer passionate about event-driven systems and distributed computing." />
 	<meta property="og:image" content="" />
 	<meta property="og:image:alt" content="Website logo" />
 
 	<!-- Twitter -->
 	<meta property="twitter:url" content="" />
-	<meta property="twitter:title" content="Personal Blogging Website of Ritankar Saha" />
-	<meta property="twitter:description" content="The personal blogging website of Ritankar Saha, a backend, cloud, and Web3 engineer passionate about event-driven systems and distributed computing." />
+	<meta property="twitter:title" content="Ritankar Saha | Backend, Cloud & Web3 Engineer" />
+	<meta property="twitter:description" content="The personal website of Ritankar Saha, a backend, cloud, and Web3 engineer passionate about event-driven systems and distributed computing." />
 	<meta property="twitter:image" content="" />
 	<meta property="twitter:image:alt" content="Website logo" />
 </svelte:head>
 
-<div class="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-	<div class="container mx-auto px-4 sm:px-6 lg:px-8">
-		<header class="py-16 sm:py-24">
-			<h1 class="text-4xl sm:text-6xl font-bold text-gray-900 text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
-				Ritankar Saha
-			</h1>
-			<div class="max-w-3xl mx-auto space-y-6 text-center">
-				<p class="text-lg sm:text-xl text-gray-700 leading-relaxed">
-					Hey, I'm an <span class="font-semibold text-blue-600">aspiring backend, cloud, and Web3 engineer</span> with a strong interest in <span class="font-semibold text-blue-600">distributed systems, event-driven architectures, and DevOps</span>.
-				</p>
-				<p class="text-lg sm:text-xl text-gray-700 leading-relaxed">
-					Visit the <a href="/writing" class="inline-flex items-center text-blue-600 hover:text-blue-700 transition-colors font-medium">
-						writing <span class="ml-1">→</span>
-					</a> section for my daily logs on backend systems, Web3, cloud computing, and DevOps.
-				</p>
-				<div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-					<a href="mailto:ritankar.saha786@gmail.com" class="inline-flex items-center px-6 py-3 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors">
-						Email Me
-					</a>
-					<a href="https://x.com/ritankarxx" target="_blank" rel="noreferrer" class="inline-flex items-center px-6 py-3 rounded-full border-2 border-gray-200 hover:border-blue-600 text-gray-700 hover:text-blue-600 transition-all">
-						@ritankarxx
-					</a>
+<div class="min-h-screen">
+	<!-- Hero Section -->
+	<section class="relative py-20 md:py-32 overflow-hidden">
+		<div class="absolute inset-0 bg-gradient-to-br from-primary-50 to-secondary-50 opacity-70"></div>
+		<div class="absolute inset-0 opacity-20">
+			<div class="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:20px_20px]"></div>
+		</div>
+		
+		<div class="container mx-auto px-6 relative z-10">
+			{#if visible}
+				<div class="max-w-4xl mx-auto text-center" in:fly={{ y: 50, duration: 1000 }}>
+					<h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+						<span class="gradient-text">Ritankar Saha</span>
+					</h1>
+					
+					<p class="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed">
+						Hey, I'm an <span class="font-semibold text-primary-700">aspiring backend, cloud, and Web3 engineer</span> with a strong interest in <span class="font-semibold text-primary-700">distributed systems, event-driven architectures, and DevOps</span>.
+					</p>
+					
+					<div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+						<a href="/writing" class="btn btn-primary px-8 py-3 rounded-full text-base">
+							Read My Blog
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+								<path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+							</svg>
+						</a>
+						
+						<a href="mailto:ritankar.saha786@gmail.com" class="btn btn-outline px-8 py-3 rounded-full text-base">
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+								<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+								<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+							</svg>
+							Contact Me
+						</a>
+					</div>
+					
+					<div class="flex justify-center mt-12">
+						<div class="flex space-x-4">
+							<a href="https://github.com/ritankarsaha" target="_blank" rel="noreferrer" class="btn btn-outline p-3 rounded-full">
+								<i class="fab fa-github text-lg"></i>
+							</a>
+							<a href="https://x.com/ritankarxx" target="_blank" rel="noreferrer" class="btn btn-outline p-3 rounded-full">
+								<i class="fab fa-twitter text-lg"></i>
+							</a>
+							<a href="https://www.linkedin.com/in/ritankar-saha-8041b9289/" target="_blank" rel="noreferrer" class="btn btn-outline p-3 rounded-full">
+								<i class="fab fa-linkedin text-lg"></i>
+							</a>
+						</div>
+					</div>
 				</div>
-			</div>
-		</header>
+			{/if}
+		</div>
+	</section>
 
-		<main class="py-12">
-			<section class="mb-20">
-				<h2 class="text-3xl font-bold text-gray-900 mb-8 relative">
-					<span class="bg-blue-100 px-2 py-1 rounded">Latest Posts</span>
-				</h2>
+	<!-- Latest Posts Section -->
+	<section class="py-20 bg-white">
+		<div class="container mx-auto px-6">
+			{#if visible}
+				<div class="mb-12 text-center" in:fly={{ y: 30, duration: 800, delay: 200 }}>
+					<h2 class="text-3xl font-bold mb-4">Latest Posts</h2>
+					<p class="text-gray-600 max-w-2xl mx-auto">Explore my latest thoughts and insights on backend systems, Web3, cloud computing, and DevOps.</p>
+				</div>
+				
 				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-					{#each data.posts as post}
-						<Post post={post} />
+					{#each data.posts as post, i}
+						<div in:fly={{ y: 20, duration: 600, delay: 300 + i * 100 }}>
+							<Post {post} />
+						</div>
 					{/each}
 				</div>
-			</section>
+				
+				<div class="text-center mt-12" in:fade={{ duration: 800, delay: 600 }}>
+					<a href="/writing" class="btn btn-outline px-6 py-3 rounded-lg">
+						View All Posts
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+							<path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+						</svg>
+					</a>
+				</div>
+			{/if}
+		</div>
+	</section>
 
-			<PageBreak />
-
-			<section class="py-12">
-				<h2 class="text-3xl font-bold text-gray-900 mb-8 relative">
-					<span class="bg-blue-100 px-2 py-1 rounded">Experience & Skills</span>
-				</h2>
-				<div class="space-y-8 max-w-4xl">
-					<div class="prose prose-lg text-gray-700">
+	<!-- Skills & Experience Section -->
+	<section class="py-20 bg-gray-50">
+		<div class="container mx-auto px-6">
+			{#if visible}
+				<div class="mb-12 text-center" in:fly={{ y: 30, duration: 800, delay: 400 }}>
+					<h2 class="text-3xl font-bold mb-4">Experience & Skills</h2>
+					<p class="text-gray-600 max-w-2xl mx-auto">My expertise in backend development, Web3, cloud computing, and distributed systems.</p>
+				</div>
+				
+				<div class="max-w-4xl mx-auto" in:fly={{ y: 30, duration: 800, delay: 600 }}>
+					<div class="prose prose-lg text-gray-700 mb-12">
 						<p class="leading-relaxed">
-							I've worked on <span class="font-semibold text-blue-600">backend development, Web3, cloud computing, and distributed systems</span>. My expertise includes building event-driven microservices, working with Kafka, designing cloud architectures on AWS, and developing backend solutions using Golang.
+							I've worked on <span class="font-semibold text-primary-700">backend development, Web3, cloud computing, and distributed systems</span>. My expertise includes building event-driven microservices, working with Kafka, designing cloud architectures on AWS, and developing backend solutions using Golang.
 						</p>
 					</div>
 					
-					<!-- <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-						<h3 class="text-xl font-semibold mb-4 text-gray-900">Notable Projects</h3>
-						<ul class="space-y-3">
-							<li class="flex items-start">
-								<span class="text-blue-600 mr-2">•</span>
-								<span>Contributor to <a target="_blank" rel="noreferrer" href="https://github.com/dhiway/cord" class="text-blue-600 hover:text-blue-800 transition-colors font-medium">Dhiway Cord</a> - Rust-based decentralized identity framework.</span>
-							</li>
-							<li class="flex items-start">
-								<span class="text-blue-600 mr-2">•</span>
-								<span>Contributor to <a target="_blank" rel="noreferrer" href="https://github.com/nightwatchjs/nightwatch" class="text-blue-600 hover:text-blue-800 transition-colors font-medium">Nightwatch.js</a> - End-to-end testing framework for web applications.</span>
-							</li>
-							<li class="flex items-start">
-								<span class="text-blue-600 mr-2">•</span>
-								<span>Contributor to <a target="_blank" rel="noreferrer" href="https://github.com/c2siorg/Webiu" class="text-blue-600 hover:text-blue-800 transition-colors font-medium">Webiu</a> - Open-source web UI toolkit.</span>
-							</li>
-						</ul>
-					</div> -->
-
-					<div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-						<h3 class="text-xl font-semibold mb-4 text-gray-900">Technical Stack</h3>
-						<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-							<div>
-								<h4 class="font-medium text-blue-600 mb-2">Backend</h4>
-								<p class="text-gray-700">Golang, Node.js, TypeScript, Django, REST APIs, GraphQL</p>
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+						<div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-all duration-300 hover:border-primary-100">
+							<h3 class="text-xl font-semibold mb-4 text-gray-900">Technical Stack</h3>
+							<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+								<div>
+									<h4 class="font-medium text-primary-700 mb-2">Backend</h4>
+									<p class="text-gray-700">Golang, Node.js, TypeScript, Django, REST APIs, GraphQL</p>
+								</div>
+								<div>
+									<h4 class="font-medium text-primary-700 mb-2">Cloud & DevOps</h4>
+									<p class="text-gray-700">AWS (EC2, S3, Lambda, DynamoDB), Docker, Kubernetes</p>
+								</div>
+								<div>
+									<h4 class="font-medium text-primary-700 mb-2">Databases</h4>
+									<p class="text-gray-700">PostgreSQL, MySQL, MongoDB, Redis</p>
+								</div>
+								<div>
+									<h4 class="font-medium text-primary-700 mb-2">Event-Driven Systems</h4>
+									<p class="text-gray-700">Apache Kafka, RabbitMQ</p>
+								</div>
 							</div>
+						</div>
+						
+						<div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-all duration-300 hover:border-primary-100">
+							<h3 class="text-xl font-semibold mb-4 text-gray-900">Web3 & Blockchain</h3>
+							<p class="text-gray-700 mb-4">
+								I'm exploring the world of Web3 development and blockchain technologies, building decentralized applications and smart contracts on Ethereum and Solana.
+							</p>
 							<div>
-								<h4 class="font-medium text-blue-600 mb-2">Cloud & DevOps</h4>
-								<p class="text-gray-700">AWS (EC2, S3, Lambda, DynamoDB), Docker, Kubernetes</p>
-							</div>
-							<div>
-								<h4 class="font-medium text-blue-600 mb-2">Databases</h4>
-								<p class="text-gray-700">PostgreSQL, MySQL, MongoDB, Redis</p>
-							</div>
-							<div>
-								<h4 class="font-medium text-blue-600 mb-2">Event-Driven Systems</h4>
-								<p class="text-gray-700">Apache Kafka, RabbitMQ</p>
-							</div>
-							<div>
-								<h4 class="font-medium text-blue-600 mb-2">Web3</h4>
-								<p class="text-gray-700">Solidity, Smart Contracts, Solana, Ethereum</p>
+								<h4 class="font-medium text-primary-700 mb-2">Technologies</h4>
+								<p class="text-gray-700">Solidity, Smart Contracts, Ethereum, Solana, Web3.js, Ethers.js</p>
 							</div>
 						</div>
 					</div>
-
-					<div class="text-center pt-8">
-						<a href="/contributions" class="inline-flex items-center px-8 py-4 rounded-full bg-gray-900 text-white hover:bg-gray-800 transition-colors">
-							View Open Source Contributions
-							<span class="ml-2">→</span>
-						</a>
+					
+					<div class="flex justify-center" in:fade={{ duration: 800, delay: 800 }}>
+						<div class="flex flex-col sm:flex-row gap-4">
+							<a href="/skills" class="btn btn-outline px-6 py-3 rounded-lg">
+								View All Skills
+							</a>
+							<a href="/projects" class="btn btn-outline px-6 py-3 rounded-lg">
+								Browse Projects
+							</a>
+							<a href="/contributions" class="btn btn-outline px-6 py-3 rounded-lg">
+								Open Source Contributions
+							</a>
+						</div>
 					</div>
 				</div>
-			</section>
-		</main>
+			{/if}
+		</div>
+	</section>
 
-		<footer class="py-12 text-center border-t border-gray-200">
-			<p class="text-gray-600">&copy; 2024 Ritankar Saha. All rights reserved.</p>
-		</footer>
-	</div>
+	<!-- Contact Section -->
+	<section class="py-20 bg-white">
+		<div class="container mx-auto px-6">
+			{#if visible}
+				<div class="max-w-4xl mx-auto text-center" in:fly={{ y: 30, duration: 800, delay: 800 }}>
+					<h2 class="text-3xl font-bold mb-6">Let's Connect</h2>
+					<p class="text-xl text-gray-700 mb-8">
+						I'm always open to discussing new projects, opportunities, or just chatting about technology.
+					</p>
+					
+					<a href="mailto:ritankar.saha786@gmail.com" class="btn btn-primary px-8 py-3 rounded-full text-base inline-flex items-center">
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+							<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+							<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+						</svg>
+						ritankar.saha786@gmail.com
+					</a>
+				</div>
+			{/if}
+		</div>
+	</section>
 </div>
-
-<style>
-	:global(body) {
-		font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-	}
-
-	a {
-		text-decoration: none;
-	}
-</style>
