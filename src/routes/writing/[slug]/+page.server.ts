@@ -1,36 +1,66 @@
+// src/routes/writing/[slug]/+page.server.ts
 import type { PageServerLoad } from './$types';
-import { slugFromPath } from '$lib/slugFromPath';
-import { error } from '@sveltejs/kit';
-import { renderTweets } from 'sveltekit-tweet/server';
+import { error }              from '@sveltejs/kit';
+import { slugFromPath }       from '$lib/slugFromPath';
+import { renderTweets }       from 'sveltekit-tweet/server';
+import { notion, STATS_DB_ID } from '$lib/notion';
 
 export const load: PageServerLoad = async ({ params }) => {
-	const modules = import.meta.glob(`/src/posts/*.{md,svx,svelte.md}`);
+  const slug = params.slug;
 
-	let match: { path?: string; resolver?: App.MdsvexResolver } = {};
+// the post 
+  const modules = import.meta.glob(`/src/posts/*.{md,svx,svelte.md}`);
+  let match: { resolver?: any } = {};
+  for (const [path, resolver] of Object.entries(modules)) {
+    if (slugFromPath(path) === slug) {
+      match = { resolver: resolver as any };
+      break;
+    }
+  }
+  const post = await match.resolver?.();
+  if (!post || !post.metadata.published) throw error(404);
 
-	for (const [path, resolver] of Object.entries(modules)) {
-		if (slugFromPath(path) === params.slug) {
-			match = { path, resolver: resolver as unknown as App.MdsvexResolver };
-			break;
-		}
-	}
+  let content  = post.default.render().html;
+  let readTime = Math.round((content.replace(/<[^>]+>/g, '').length / 5) / 238);
+  content       = await renderTweets(content);
 
-	const post = await match?.resolver?.();
+// view count
+  let views = 1;
+  const statsQuery = await notion.databases.query({
+    database_id: STATS_DB_ID,
+    filter: {
+      property: 'Post Slug',
+      title: { equals: slug }
+    }
+  });
 
-	if (!post || !post.metadata.published) {
-		throw error(404); // Couldn't resolve the post
-	}
+  if (statsQuery.results.length === 0) {
+    // first time: create a new stats page
+    await notion.pages.create({
+      parent: { database_id: STATS_DB_ID },
+      properties: {
+        'Post Slug': { title: [{ text: { content: slug } }] },
+        Views:      { number: 1 }
+      }
+    });
+  } else {
 
-	let content = post.default.render().html;
+    const page = statsQuery.results[0] as any;
+    const current = page.properties.Views.number ?? 0;
+    views = current + 1;
+    await notion.pages.update({
+      page_id: page.id,
+      properties: {
+        Views: { number: views }
+      }
+    });
+  }
 
-	let readTime = Math.round(((content.replace(/(<([^>]+)>)/ig, '').length) / 5) / 238)
-
-	content = await renderTweets(content);
-
-
-	return {
-		content,
-		readTime,
-		frontmatter: post.metadata
-	};
+  return {
+    content,
+    readTime,
+    frontmatter: post.metadata,
+    slug,
+    views           
+  };
 };
