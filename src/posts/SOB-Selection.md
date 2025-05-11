@@ -250,4 +250,6 @@ I want to make the most of this opportunity not just to build something cool, bu
 
 > I’ve gone into waaay more detail (like step-by-step walkthrough level) about the whole SoB’25 process in my video. So if you’re **serious about cracking next year’s cohort**, definitely give it a watch 🎯 But hey, if you’re just here to vibe and get a feel of the experience, **this blog should do the trick just fine too 😄**
 
+さようなら、良い一日を
+
 Ciao till the next blog !! 👋
