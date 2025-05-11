@@ -243,6 +243,10 @@ Take your contributions all the way up to the day results are announced (and bey
 
 So yeah—keep the spirit of open-source high, and keep showing up ✌️ 
 
+<img width="645" alt="Screenshot 2025-05-11 at 3 04 52 PM" src="https://github.com/user-attachments/assets/235510c8-72c5-42ef-b244-5684758ade71" />
+
+These are the 3 proposals that I had submitted.
+
 ## The D-Day
 
 So here’s how it goes—**you either get “Congrats!” or “Maybe next time!”** in your inbox.
@@ -251,6 +255,11 @@ No suspense, no fireworks.
 
 **I got both types of emails** (yep, been on both sides of the drama 😅) — sharing them below for the feels!
 
+<img width="644" alt="Screenshot 2025-05-11 at 3 05 34 PM" src="https://github.com/user-attachments/assets/15e212ff-283d-4c03-8a22-c277265fe4b2" />
+
+<img width="648" alt="Screenshot 2025-05-11 at 3 05 44 PM" src="https://github.com/user-attachments/assets/dd29ba7b-26a2-4d82-a295-21756c3e9dc4" />
+
+Acceptance and Rejection Emails
 After that, you'll start getting a bunch of emails about formalities, timelines, forms, and all that *official grown-up stuff* 😅
 
 (Don’t worry I have broken it all down in my video  👀)
