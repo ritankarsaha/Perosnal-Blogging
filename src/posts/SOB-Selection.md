@@ -54,6 +54,8 @@ That email is a goldmine itself, it includes:
 - A full list of course materials (including *Grokking Bitcoin* which is kinda like the holy book here)
 - Links to **super helpful** resources
 - And an invite to their **Discord server** where you’ll find mentors, peers, and possibly your future collaborators or friends-for-life.
+- 
+<img width="641" alt="Screenshot 2025-05-11 at 4 47 38 PM" src="https://github.com/user-attachments/assets/85973ec8-7f37-43c0-bdcf-71d23fe269b2" />
 
 ## The Assignment Phase (Where Things gets Real) —
 
@@ -73,6 +75,8 @@ Moral of the story? — *Communication is key in open source.*
 
 Ask questions, help others, stay active in the **Discord Channel**. Everyone’s there to learn, grow, and code for good. And that’s the best part about this community—**you’re never coding alone**.
 
+<img width="644" alt="Screenshot 2025-05-11 at 4 48 23 PM" src="https://github.com/user-attachments/assets/0920ddc1-1d6b-4142-a8a5-8c5998e30ca4" />
+
 **Each week, if you successfully complete your assignment, you’ll get a sweet little email saying “Congratulations, you passed Week X.” and boom—you’re off to the next one.**
 
 And if you managed to cross the Week 3 finish line (this year specific, you may not be lucky next year and need to complete all 4 weeks 🥹) , you'd get the golden mail that basically says:
@@ -80,6 +84,8 @@ And if you managed to cross the Week 3 finish line (this year specific, you may 
 🎉 *“Congrats! You’ve advanced it to the proposal round.”*
 
 Cue happy dance and mild panic because... now comes the real boss level 😅.
+
+<img width="641" alt="Screenshot 2025-05-11 at 4 48 49 PM" src="https://github.com/user-attachments/assets/3ecba0f7-fa26-4cec-ba80-d46776967075" />
 
 ## The Big Fat Proposal Round — 
 
@@ -181,6 +187,8 @@ But after a lot of thinking (and even more coffee ☕), I decided to roll with *
 
 So yeah cheers to good convos, and good vibes ✌️
 
+<img width="644" alt="Screenshot 2025-05-11 at 4 49 18 PM" src="https://github.com/user-attachments/assets/8d41d9e4-1668-45fd-995f-e4b5368ad005" />
+
 > Also I’ve explained the whole process in way more detail (with less rambling and more clarity, I promise 😅) in my video. There’s only so much I can pack into a blog before it starts feeling like a never-ending scroll and y’all ghost me halfway through because it reads like a history textbook 📚💀. So if you’re genuinely curious, go check out the video it’s got all the behind-the-scenes details, straight from my experience, no filters, no fluff.
 
 ## (Surprise Interview, Well Sort of 😅)
@@ -202,6 +210,8 @@ And finally **I got the mail!**
 The official selection email from SoB confirming I’d been selected for the project 🎉 (along with some formalities I had to fill out, of course).
 
 By that time, though, I had **already started working with the organisation** picking up issues, getting access to the *super secret company issue board*, and even joining **community meetings** like a proper team member. So the selection just made it official.
+
+<img width="641" alt="Screenshot 2025-05-11 at 4 49 57 PM" src="https://github.com/user-attachments/assets/fc235d21-290a-44bd-a022-a5f874c6af3d" />
 
 ## Reflections
 
