@@ -13,6 +13,8 @@ Hey everyone, I’m Ritankar, and I’m excited to share my journey into **`Goog
 
 For the GSoC’25 session I am selected for the project **`Improving Integration of Fossology with SW360`**  under the organisation **`SW360`** which comes under the parent company **`Siemens`**
 
+<img width="1172" alt="Screenshot 2025-05-11 at 3 07 47 PM" src="https://github.com/user-attachments/assets/5ac7eeba-6ee6-47a1-bb95-51cc5dc8d12b" />
+
 So, a basic intro on myself, I am currently a sophomore at the **`Indian Institute of Information Technology`**, Jabalpur, majoring in **`Computer Science and Engineering`**. I won’t bore you with a long intro (this blog’s gonna be long enough already 💀), but here’s the gist:
 
 I’m a developer passionate about **Decentralisation, Open-Source, and all things Backend and Blockchain**. Over the past year, I’ve dabbled in technologies like **Go, Rust, Solidity, TypeScript** and many more and built everything from **Decentralised Applications to Event-Driven Microservices systems using Kafka and RabbitMQ and scalable Backend systems**. I’ve also had the chance to contribute to **30+ open-source repositories** contributing over **40,000+ lines of code** and lead developer sessions as part of my college programming club.
