@@ -6,6 +6,9 @@ date: '2025-05-10'
 slug: 'SOB-Selection'
 tags: ['Internship', 'Open Source', 'Bitcoin','All','Experiences']
 ---
+> Disclaimers:
+> - To read this blog directly on Medium, click <a href ="https://medium.com/@ritankar.saha786/cracking-summer-of-bitcoin-2025-47f7075631bc"> here </a>.
+> - For a detailed video guide on how I cracked Summer of Bitcoin 2025, watch it <a href ="https://www.youtube.com/watch?v=X7gkzEvrgkk&t=5723s"> here </a>.
 
 ## Introduction -- 
 
@@ -161,7 +164,7 @@ Here’s the simple 3-point formula I followed:
 2. **Match it with your skillset** – Or at least something you can learn and manage. Don’t pick a Rust-core Lightning project if you just learned Python last week (trust me 😅).
 3. **Look for an active community** – Check the project’s GitHub activity, see if issues are getting responses, and make sure the mentors/maintainers are kind and approachable.
 
-> **P.S. I’ve shared more insider tips (the ones that *actually* set you apart from the crowd) in my video.** Can’t reveal *everything* here it’s a public blog after all lol, and some things are best kept off the record 😅. So if you’re serious about cracking it, definitely give the video a watch!
+> **P.S. I’ve shared more insider tips (the ones that *actually* set you apart from the crowd) in my <a href ="https://www.youtube.com/watch?v=X7gkzEvrgkk&t=5723s"> video </a>.** Can’t reveal *everything* here it’s a public blog after all lol, and some things are best kept off the record 😅. So if you’re serious about cracking it, definitely give the video a watch!
 
 Choose wisely, because this decision drives your entire SoB experience. Now let’s talk about how I approached writing that beast of a proposal…
 
@@ -189,7 +192,7 @@ So yeah cheers to good convos, and good vibes ✌️
 
 <img width="644" alt="Screenshot 2025-05-11 at 4 49 18 PM" src="https://github.com/user-attachments/assets/8d41d9e4-1668-45fd-995f-e4b5368ad005" />
 
-> Also I’ve explained the whole process in way more detail (with less rambling and more clarity, I promise 😅) in my video. There’s only so much I can pack into a blog before it starts feeling like a never-ending scroll and y’all ghost me halfway through because it reads like a history textbook 📚💀. So if you’re genuinely curious, go check out the video it’s got all the behind-the-scenes details, straight from my experience, no filters, no fluff.
+> Also I’ve explained the whole process in way more detail (with less rambling and more clarity, I promise 😅) in my <a href ="https://www.youtube.com/watch?v=X7gkzEvrgkk&t=5723s"> video </a>. There’s only so much I can pack into a blog before it starts feeling like a never-ending scroll and y’all ghost me halfway through because it reads like a history textbook 📚💀. So if you’re genuinely curious, go check out the <a href ="https://www.youtube.com/watch?v=X7gkzEvrgkk&t=5723s"> video </a> it’s got all the behind-the-scenes details, straight from my experience, no filters, no fluff.
 
 ## (Surprise Interview, Well Sort of 😅)
 
@@ -248,7 +251,7 @@ Also planning to:
 
 I want to make the most of this opportunity not just to build something cool, but to **grow as a developer** and hopefully, inspire a few others to take the leap too.
 
-> I’ve gone into waaay more detail (like step-by-step walkthrough level) about the whole SoB’25 process in my video. So if you’re **serious about cracking next year’s cohort**, definitely give it a watch 🎯 But hey, if you’re just here to vibe and get a feel of the experience, **this blog should do the trick just fine too 😄**
+> I’ve gone into waaay more detail (like step-by-step walkthrough level) about the whole SoB’25 process in my <a href ="https://www.youtube.com/watch?v=X7gkzEvrgkk&t=5723s"> video </a>. So if you’re **serious about cracking next year’s cohort**, definitely give it a watch 🎯 But hey, if you’re just here to vibe and get a feel of the experience, **this blog should do the trick just fine too 😄**
 
 さようなら、良い一日を
 
