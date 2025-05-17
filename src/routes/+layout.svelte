@@ -66,14 +66,17 @@
 					<a href="https://github.com/ritankarsaha" target="_blank" rel="noreferrer" class="social-link">
 						<i class="fab fa-github text-lg"></i>
 					</a>
+					<a href="https://www.linkedin.com/in/ritankar-saha-8041b9289/" target="_blank" rel="noreferrer" class="social-link">
+						<i class="fab fa-linkedin text-lg"></i>
+					</a>
+					<a href="https://medium.com/@ritankar.saha786" target="_blank" rel="noreferrer" class="social-link">
+						<i class="fab fa-medium text-lg"></i>
+					</a>
 					<a href="https://x.com/ritankarxx" target="_blank" rel="noreferrer" class="social-link">
 						<i class="fab fa-twitter text-lg"></i>
 					</a>
 					<a href="mailto:ritankar.saha786@gmail.com" class="social-link">
 						<i class="fas fa-envelope text-lg"></i>
-					</a>
-					<a href="https://www.linkedin.com/in/ritankar-saha-8041b9289/" target="_blank" rel="noreferrer" class="social-link">
-						<i class="fab fa-linkedin text-lg"></i>
 					</a>
 				</div>
 				
@@ -111,14 +114,17 @@
 						<a href="https://github.com/ritankarsaha" target="_blank" rel="noreferrer" class="social-link">
 							<i class="fab fa-github text-lg"></i>
 						</a>
+						<a href="https://www.linkedin.com/in/ritankar-saha-8041b9289/" target="_blank" rel="noreferrer" class="social-link">
+							<i class="fab fa-linkedin text-lg"></i>
+						</a>
+						<a href="https://medium.com/@ritankar.saha786" target="_blank" rel="noreferrer" class="social-link">
+							<i class="fab fa-medium text-lg"></i>
+						</a>
 						<a href="https://x.com/ritankarxx" target="_blank" rel="noreferrer" class="social-link">
 							<i class="fab fa-twitter text-lg"></i>
 						</a>
 						<a href="mailto:ritankar.saha786@gmail.com" class="social-link">
 							<i class="fas fa-envelope text-lg"></i>
-						</a>
-						<a href="https://www.linkedin.com/in/ritankar-saha-8041b9289/" target="_blank" rel="noreferrer" class="social-link">
-							<i class="fab fa-linkedin text-lg"></i>
 						</a>
 						<a href="https://wa.me/9732839187" target="_blank" rel="noreferrer" class="social-link">
 							<i class="fab fa-whatsapp text-lg"></i>
@@ -145,17 +151,20 @@
 					<a href="https://github.com/ritankarsaha" target="_blank" rel="noreferrer" class="social-link">
 						<i class="fab fa-github text-lg"></i>
 					</a>
-					<a href="https://x.com/ritankarxx" target="_blank" rel="noreferrer" class="social-link">
-						<i class="fab fa-twitter text-lg"></i>
+					<a href="https://www.linkedin.com/in/ritankar-saha-8041b9289/" target="_blank" rel="noreferrer" class="social-link">
+						<i class="fab fa-linkedin text-lg"></i>
+					</a>
+					<a href="https://medium.com/@ritankar.saha786" target="_blank" rel="noreferrer" class="social-link">
+						<i class="fab fa-medium text-lg"></i>
 					</a>
 					<a href="mailto:ritankar.saha786@gmail.com" class="social-link">
 						<i class="fas fa-envelope text-lg"></i>
 					</a>
+					<a href="https://x.com/ritankarxx" target="_blank" rel="noreferrer" class="social-link">
+						<i class="fab fa-twitter text-lg"></i>
+					</a>
 					<a href="https://www.instagram.com/" target="_blank" rel="noreferrer" class="social-link">
 						<i class="fab fa-instagram text-lg"></i>
-					</a>
-					<a href="https://www.linkedin.com/in/ritankar-saha-8041b9289/" target="_blank" rel="noreferrer" class="social-link">
-						<i class="fab fa-linkedin text-lg"></i>
 					</a>
 					<a href="https://wa.me/9732839187" target="_blank" rel="noreferrer" class="social-link">
 						<i class="fab fa-whatsapp text-lg"></i>

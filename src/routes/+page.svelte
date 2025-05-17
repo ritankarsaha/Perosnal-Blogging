@@ -52,7 +52,7 @@
 					</p>
 					
 					<div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
-						<a href="/writing" class="btn btn-primary px-8 py-3 rounded-full text-base">
+						<a href="https://medium.com/@ritankar.saha786" class="btn btn-primary px-8 py-3 rounded-full text-base">
 							Read My Blog
 							<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
 								<path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -70,14 +70,17 @@
 					
 					<div class="flex justify-center mt-12">
 						<div class="flex space-x-4">
-							<a href="https://github.com/ritankarsaha" target="_blank" rel="noreferrer" class="btn btn-outline p-3 rounded-full">
+							<a href="https://github.com/ritankarsaha" target="_blank" rel="noreferrer" class="btn btn-outline p-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
 								<i class="fab fa-github text-lg"></i>
 							</a>
-							<a href="https://x.com/ritankarxx" target="_blank" rel="noreferrer" class="btn btn-outline p-3 rounded-full">
+							<a href="https://x.com/ritankarxx" target="_blank" rel="noreferrer" class="btn btn-outline p-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
 								<i class="fab fa-twitter text-lg"></i>
 							</a>
-							<a href="https://www.linkedin.com/in/ritankar-saha-8041b9289/" target="_blank" rel="noreferrer" class="btn btn-outline p-3 rounded-full">
+							<a href="https://www.linkedin.com/in/ritankar-saha-8041b9289/" target="_blank" rel="noreferrer" class="btn btn-outline p-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
 								<i class="fab fa-linkedin text-lg"></i>
+							</a>
+							<a href="https://medium.com/@ritankar.saha786" target="_blank" rel="noreferrer" class="btn btn-outline p-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
+								<i class="fab fa-medium text-lg"></i>
 							</a>
 						</div>
 					</div>
@@ -137,15 +140,15 @@
 							<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 								<div>
 									<h4 class="font-medium text-primary-700 mb-2">Backend</h4>
-									<p class="text-gray-700">Golang, Node.js, TypeScript, Django, REST APIs, GraphQL</p>
+									<p class="text-gray-700">Rust, Golang, Java, Spring Boot, Express.js, TypeScript, Ruby, Django, REST APIs, GraphQL</p>
 								</div>
 								<div>
 									<h4 class="font-medium text-primary-700 mb-2">Cloud & DevOps</h4>
-									<p class="text-gray-700">AWS (EC2, S3, Lambda, DynamoDB), Docker, Kubernetes</p>
+									<p class="text-gray-700">AWS (EC2, S3, Lambda, DynamoDB), Docker, Kubernetes, Terraform, Prometheus, Grafana</p>
 								</div>
 								<div>
 									<h4 class="font-medium text-primary-700 mb-2">Databases</h4>
-									<p class="text-gray-700">PostgreSQL, MySQL, MongoDB, Redis</p>
+									<p class="text-gray-700">PostgreSQL, MySQL, MongoDB, Redis, CouchDB, Amazon-DynamoDB</p>
 								</div>
 								<div>
 									<h4 class="font-medium text-primary-700 mb-2">Event-Driven Systems</h4>
@@ -161,7 +164,7 @@
 							</p>
 							<div>
 								<h4 class="font-medium text-primary-700 mb-2">Technologies</h4>
-								<p class="text-gray-700">Solidity, Smart Contracts, Ethereum, Solana, Web3.js, Ethers.js</p>
+								<p class="text-gray-700">Solidity, Smart Contracts, Ethereum, Solana, Web3.js, Ethers.js, Liquid Network, Elements Blockchain</p>
 							</div>
 						</div>
 					</div>
